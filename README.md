@@ -24,3 +24,5 @@ This project will eventually use:
 - [ ] Responsive Design
 - [ ] JavaScript
 - [ ] Final Client Website
+## Git Practice
+I successfully created and used a Git branch.
