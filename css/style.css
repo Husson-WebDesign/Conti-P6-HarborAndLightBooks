@@ -1,14 +1,10 @@
+
 @charset "utf-8";
 
 /*
    Harbor Light Books & Stationery
-   Phase 1 - CSS Styling and Page Layout
+   Phase 2 - Responsive Web Design and Accessibility
 */
-
-
-/* =========================
-   Color Palette
-========================= */
 
 :root {
     --primary-color: #234e52;
@@ -18,11 +14,6 @@
     --white-color: #ffffff;
     --text-color: #2d2d2d;
 }
-
-
-/* =========================
-   Global Styles
-========================= */
 
 * {
     box-sizing: border-box;
@@ -54,11 +45,6 @@ a:hover {
     color: var(--accent-color);
 }
 
-
-/* =========================
-   Typography
-========================= */
-
 h1,
 h2,
 h3 {
@@ -68,11 +54,11 @@ h3 {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 2.75rem);
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
 }
 
 h3 {
@@ -83,21 +69,11 @@ p {
     margin-bottom: 1rem;
 }
 
-
-/* =========================
-   Content Container
-========================= */
-
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
-
-
-/* =========================
-   Header
-========================= */
 
 header {
     background-color: var(--primary-color);
@@ -106,55 +82,53 @@ header {
     text-align: center;
 }
 
-header h1 {
-    margin-bottom: 0.5rem;
+.site-title {
+    margin: 0 0 0.5rem;
     color: var(--white-color);
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    font-weight: bold;
+    line-height: 1.2;
 }
 
-header p {
+header p:not(.site-title) {
     margin-top: 0;
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
 }
 
-
-/* =========================
-   Navigation
-========================= */
-
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 nav a {
+    display: inline-block;
+    min-width: 90px;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
     color: var(--white-color);
     font-weight: bold;
     text-decoration: none;
-    padding: 0.5rem 0.75rem;
 }
 
 nav a:hover {
-    color: var(--accent-color);
+    background-color: var(--accent-color);
+    color: var(--white-color);
 }
 
-
-/* =========================
-   Main Content
-========================= */
+nav a:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
 
 section {
     padding: 4rem 0;
 }
-
-
-/* =========================
-   Hero Section
-========================= */
 
 #home {
     min-height: 450px;
@@ -164,9 +138,9 @@ section {
     text-align: center;
 }
 
-#home h2 {
+#home h1 {
     color: var(--white-color);
-    font-size: 2.75rem;
+    font-size: clamp(2rem, 6vw, 2.75rem);
 }
 
 #home p {
@@ -174,11 +148,6 @@ section {
     margin-left: auto;
     margin-right: auto;
 }
-
-
-/* =========================
-   Buttons
-========================= */
 
 #home a,
 .button {
@@ -202,11 +171,6 @@ section {
     color: var(--white-color);
 }
 
-
-/* =========================
-   About Section
-========================= */
-
 #about {
     background-color: var(--white-color);
 }
@@ -217,11 +181,6 @@ section {
     margin: 1.5rem auto;
     border-radius: 8px;
 }
-
-
-/* =========================
-   Services Section
-========================= */
 
 #services {
     background-color: var(--background-color);
@@ -241,14 +200,9 @@ section {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-.service-card h3 {
+.service-card h2 {
     margin-bottom: 0.5rem;
 }
-
-
-/* =========================
-   Contact Section
-========================= */
 
 #contact {
     background-color: var(--white-color);
@@ -262,12 +216,8 @@ section {
     color: var(--primary-color);
 }
 
-
-/* =========================
-   Contact Form
-========================= */
-
 form {
+    width: 100%;
     max-width: 700px;
     margin-top: 2rem;
 }
@@ -284,8 +234,10 @@ label {
 }
 
 input,
+select,
 textarea {
     width: 100%;
+    max-width: 100%;
     padding: 0.75rem;
     border: 1px solid #cccccc;
     border-radius: 6px;
@@ -300,15 +252,12 @@ textarea {
 }
 
 input:focus,
+select:focus,
 textarea:focus {
     border-color: var(--primary-color);
-    outline: 2px solid var(--accent-color);
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
 }
-
-
-/* =========================
-   Footer
-========================= */
 
 footer {
     padding: 2rem;
@@ -321,12 +270,108 @@ footer p {
     margin: 0;
 }
 
-
-/* =========================
-   Focus Styles
-========================= */
-
-a:focus {
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
     outline: 3px solid var(--accent-color);
     outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 1.75rem 0;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #home {
+        min-height: auto;
+        padding: 4rem 1.5rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    header {
+        padding: 1.5rem 0;
+    }
+
+    .site-title {
+        font-size: 1.8rem;
+    }
+
+    header p:not(.site-title) {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 0.8rem 1rem;
+    }
+
+    section {
+        padding: 2.5rem 0;
+    }
+
+    #home {
+        padding: 3rem 1rem;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home a,
+    .button {
+        width: 100%;
+        max-width: 300px;
+        padding: 0.85rem 1rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.25rem;
+    }
+
+    form {
+        margin-top: 1.5rem;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+    }
 }
