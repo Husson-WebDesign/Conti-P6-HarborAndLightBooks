@@ -1,9 +1,8 @@
-
 @charset "utf-8";
 
 /*
    Harbor Light Books & Stationery
-   Phase 2 - Responsive Web Design and Accessibility
+   Phase 3 - JavaScript and Interactive Features
 */
 
 :root {
@@ -13,6 +12,8 @@
     --background-color: #f7f3ed;
     --white-color: #ffffff;
     --text-color: #2d2d2d;
+    --error-color: #a12626;
+    --success-color: #245b35;
 }
 
 * {
@@ -62,7 +63,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 p {
@@ -75,40 +76,69 @@ p {
     margin: 0 auto;
 }
 
+/* Header and Lighthouse Branding */
+
 header {
     background-color: var(--primary-color);
     color: var(--white-color);
     padding: 2rem 0;
     text-align: center;
 }
+
 .brand {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
     margin-bottom: 0.5rem;
+    padding: 0 1rem;
 }
 
 .brand-logo {
-    font-size: 2.5rem;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
 }
 
 .brand .site-title {
     margin: 0;
 }
+
 .site-title {
-    margin: 0 0 0.5rem;
     color: var(--white-color);
     font-size: clamp(1.75rem, 5vw, 2.5rem);
     font-weight: bold;
     line-height: 1.2;
 }
 
-header p:not(.site-title) {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
+header .tagline,
+header > p:not(.site-title) {
+    margin: 0 1rem 1.5rem;
     font-size: 1.1rem;
 }
+
+/* Mobile Navigation Button */
+
+.menu-toggle {
+    display: none;
+    margin: 1rem auto;
+    padding: 0.7rem 1.4rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-toggle:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Navigation */
 
 nav ul {
     display: flex;
@@ -130,15 +160,22 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
+nav a:hover,
+nav a[aria-current="page"] {
     background-color: var(--accent-color);
-    color: var(--white-color);
+    color: var(--primary-color);
 }
 
-nav a:focus {
+nav a:focus-visible,
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
     outline: 3px solid var(--accent-color);
     outline-offset: 3px;
 }
+
+/* Main Sections */
 
 section {
     padding: 4rem 0;
@@ -171,7 +208,7 @@ section {
     border: none;
     border-radius: 6px;
     background-color: var(--accent-color);
-    color: var(--white-color);
+    color: var(--primary-color);
     font-family: inherit;
     font-size: 1rem;
     font-weight: bold;
@@ -185,8 +222,11 @@ section {
     color: var(--white-color);
 }
 
+/* About Page */
+
 #about {
     background-color: var(--white-color);
+    padding: 3rem;
 }
 
 #about img {
@@ -195,6 +235,8 @@ section {
     margin: 1.5rem auto;
     border-radius: 8px;
 }
+
+/* Services Page */
 
 #services {
     background-color: var(--background-color);
@@ -218,7 +260,70 @@ section {
     margin-bottom: 0.5rem;
 }
 
+/* FAQ Accordion */
+
+.faq-section {
+    padding: 3rem 0;
+}
+
+.faq-section > p {
+    margin-bottom: 1.5rem;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #d7d2ca;
+    border-radius: 6px;
+    background-color: var(--white-color);
+    overflow: hidden;
+}
+
+.faq-item h3 {
+    margin: 0;
+}
+
+.faq-question {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq-question:hover,
+.faq-question[aria-expanded="true"] {
+    background-color: #e6eee7;
+}
+
+.faq-question::after {
+    content: "+";
+    float: right;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+.faq-question[aria-expanded="true"]::after {
+    content: "−";
+}
+
+.faq-answer {
+    padding: 0 1rem 1rem;
+}
+
+.faq-answer p {
+    margin-bottom: 0;
+}
+
+/* Contact Page and Form */
+
 #contact {
+    padding: 3rem;
     background-color: var(--white-color);
 }
 
@@ -269,9 +374,39 @@ input:focus,
 select:focus,
 textarea:focus {
     border-color: var(--primary-color);
-    outline: 3px solid var(--accent-color);
-    outline-offset: 2px;
 }
+
+/* Form Validation Messages */
+
+.error-message {
+    margin: 0.4rem 0 0;
+    color: var(--error-color);
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+input.invalid,
+textarea.invalid {
+    border: 2px solid var(--error-color);
+}
+
+#form-feedback {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+#form-feedback.error {
+    color: var(--error-color);
+}
+
+#form-feedback.success {
+    padding: 1rem;
+    border-left: 5px solid var(--success-color);
+    background-color: #e8f3e9;
+    color: var(--success-color);
+}
+
+/* Footer */
 
 footer {
     padding: 2rem;
@@ -284,17 +419,9 @@ footer p {
     margin: 0;
 }
 
-a:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 3px solid var(--accent-color);
-    outline-offset: 3px;
-}
+/* Tablet Layout */
 
 @media (max-width: 900px) {
-
     header {
         padding: 1.75rem 0;
     }
@@ -317,8 +444,9 @@ textarea:focus {
     }
 }
 
-@media (max-width: 600px) {
+/* Mobile Layout and Expandable Menu */
 
+@media (max-width: 600px) {
     .container {
         width: 92%;
     }
@@ -327,21 +455,37 @@ textarea:focus {
         padding: 1.5rem 0;
     }
 
-    .site-title {
-        font-size: 1.8rem;
+    .brand {
+        gap: 8px;
     }
 
-    header p:not(.site-title) {
+    .brand-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .site-title {
+        font-size: 1.5rem;
+    }
+
+    header .tagline,
+    header > p:not(.site-title) {
         font-size: 1rem;
     }
-    .brand {
-    flex-wrap: wrap;
-    gap: 8px;
-}
 
-.brand-logo {
-    font-size: 2rem;
-}
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        padding: 0 1rem;
+        margin-top: 1rem;
+    }
+
+    header nav.open {
+        display: block !important;
+    }
 
     nav ul {
         flex-direction: column;
@@ -383,34 +527,28 @@ textarea:focus {
         padding: 1.25rem;
     }
 
-    form {
-        margin-top: 1.5rem;
+    #about,
+    #contact {
+        padding: 2rem 1.25rem;
     }
 
-    input,
-    select,
-    textarea {
-        font-size: 1rem;
+    .faq-section {
+        padding: 2rem 0;
+    }
+
+    form {
+        margin-top: 1.5rem;
     }
 
     footer {
         padding: 1.5rem 1rem;
     }
 }
-.brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 0.5rem;
-}
 
-.brand-logo {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
-}
+/* Respect reduced-motion preferences */
 
-.brand .site-title {
-    margin: 0;
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }

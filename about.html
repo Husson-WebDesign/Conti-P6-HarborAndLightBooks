@@ -5,30 +5,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>About Us | Harbor Light Books &amp; Stationery</title>
+
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
     <header>
-    
-
-            <nav aria-label="Main navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
         <div class="brand">
-    <img src="images/lighthouse.svg"
-         alt="Lighthouse logo"
-         class="brand-logo">
-    <p class="site-title">Harbor Light Books &amp; Stationery</p>
-</div>
+            <img src="images/lighthouse.svg"
+                 alt="Lighthouse logo"
+                 class="brand-logo">
+
+            <p class="site-title">Harbor Light Books &amp; Stationery</p>
+        </div>
+
+        <button class="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+            Menu
+        </button>
+
+        <nav id="main-navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main class="container">
@@ -65,4 +74,3 @@
 
 </body>
 </html>
-

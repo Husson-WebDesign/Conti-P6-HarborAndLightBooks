@@ -5,33 +5,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Harbor Light Books &amp; Stationery</title>
+
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
     <header>
         <div class="brand">
-    <img src="images/lighthouse.svg"
-         alt="Lighthouse logo"
-         class="brand-logo">
-    <p class="site-title">Harbor Light Books &amp; Stationery</p>
-</div>
-  
+            <img src="images/lighthouse.svg"
+                 alt="Lighthouse logo"
+                 class="brand-logo">
 
-<p>Books, stories, and community in the heart of Bangor.</p>
-
-
-            <nav aria-label="Main navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <p class="site-title">Harbor Light Books &amp; Stationery</p>
         </div>
+
+        <p class="tagline">Books, stories, and community in the heart of Bangor.</p>
+
+        <button class="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+            Menu
+        </button>
+
+        <nav id="main-navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main class="container">
