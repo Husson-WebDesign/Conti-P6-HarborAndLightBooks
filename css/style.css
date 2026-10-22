@@ -1,1 +1,416 @@
 
+@charset "utf-8";
+
+/*
+   Harbor Light Books & Stationery
+   Phase 2 - Responsive Web Design and Accessibility
+*/
+
+:root {
+    --primary-color: #234e52;
+    --secondary-color: #84a98c;
+    --accent-color: #e9a66f;
+    --background-color: #f7f3ed;
+    --white-color: #ffffff;
+    --text-color: #2d2d2d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 2rem 0;
+    text-align: center;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 0.5rem;
+}
+
+.brand-logo {
+    font-size: 2.5rem;
+}
+
+.brand .site-title {
+    margin: 0;
+}
+.site-title {
+    margin: 0 0 0.5rem;
+    color: var(--white-color);
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+header p:not(.site-title) {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    min-width: 90px;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    color: var(--white-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+}
+
+nav a:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+#home {
+    min-height: 450px;
+    padding: 5rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    text-align: center;
+}
+
+#home h1 {
+    color: var(--white-color);
+    font-size: clamp(2rem, 6vw, 2.75rem);
+}
+
+#home p {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home a,
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#home a:hover,
+.button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+#about {
+    background-color: var(--white-color);
+}
+
+#about img {
+    width: 100%;
+    max-width: 700px;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+}
+
+#services {
+    background-color: var(--background-color);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    padding: 1.5rem;
+    background-color: var(--white-color);
+    border-top: 5px solid var(--accent-color);
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h2 {
+    margin-bottom: 0.5rem;
+}
+
+#contact {
+    background-color: var(--white-color);
+}
+
+#contact p {
+    max-width: 800px;
+}
+
+#contact strong {
+    color: var(--primary-color);
+}
+
+form {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: var(--white-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+footer {
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 1.75rem 0;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #home {
+        min-height: auto;
+        padding: 4rem 1.5rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    header {
+        padding: 1.5rem 0;
+    }
+
+    .site-title {
+        font-size: 1.8rem;
+    }
+
+    header p:not(.site-title) {
+        font-size: 1rem;
+    }
+    .brand {
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.brand-logo {
+    font-size: 2rem;
+}
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 0.8rem 1rem;
+    }
+
+    section {
+        padding: 2.5rem 0;
+    }
+
+    #home {
+        padding: 3rem 1rem;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home a,
+    .button {
+        width: 100%;
+        max-width: 300px;
+        padding: 0.85rem 1rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.25rem;
+    }
+
+    form {
+        margin-top: 1.5rem;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+    }
+}
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 0.5rem;
+}
+
+.brand-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.brand .site-title {
+    margin: 0;
+}
