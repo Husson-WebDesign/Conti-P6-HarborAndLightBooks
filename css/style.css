@@ -81,7 +81,21 @@ header {
     padding: 2rem 0;
     text-align: center;
 }
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 0.5rem;
+}
 
+.brand-logo {
+    font-size: 2.5rem;
+}
+
+.brand .site-title {
+    margin: 0;
+}
 .site-title {
     margin: 0 0 0.5rem;
     color: var(--white-color);
@@ -320,6 +334,14 @@ textarea:focus {
     header p:not(.site-title) {
         font-size: 1rem;
     }
+    .brand {
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.brand-logo {
+    font-size: 2rem;
+}
 
     nav ul {
         flex-direction: column;
@@ -374,4 +396,21 @@ textarea:focus {
     footer {
         padding: 1.5rem 1rem;
     }
+}
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 0.5rem;
+}
+
+.brand-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.brand .site-title {
+    margin: 0;
 }
