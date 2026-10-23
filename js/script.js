@@ -1,4 +1,4 @@
-```javascript
+
 /*
    Harbor Light Books & Stationery
    Phase 3 - Interactive Features
