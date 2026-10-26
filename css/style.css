@@ -76,7 +76,6 @@ p {
     margin: 0 auto;
 }
 
-/* Header and Lighthouse Branding */
 
 header {
     background-color: var(--primary-color);
@@ -87,6 +86,7 @@ header {
 
 .brand {
     display: flex;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
     gap: 12px;
@@ -105,10 +105,10 @@ header {
 }
 
 .site-title {
-    color: var(--white-color);
-    font-size: clamp(1.75rem, 5vw, 2.5rem);
-    font-weight: bold;
-    line-height: 1.2;
+  color: var(--white-color);
+  font-size: 2.0rem; 
+  font-weight: bold;
+  line-height: 1.2;
 }
 
 header .tagline,
@@ -544,8 +544,6 @@ footer p {
         padding: 1.5rem 1rem;
     }
 }
-
-/* Respect reduced-motion preferences */
 
 @media (prefers-reduced-motion: reduce) {
     html {
