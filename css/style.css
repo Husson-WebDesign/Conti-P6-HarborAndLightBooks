@@ -6,12 +6,12 @@
 */
 
 :root {
-    --primary-color: #234e52;
-    --secondary-color: #84a98c;
-    --accent-color: #e9a66f;
-    --background-color: #f7f3ed;
-    --white-color: #ffffff;
-    --text-color: #2d2d2d;
+    --primary-color: #6B1D2F;
+    --secondary-color: #1D2D44;
+    --accent-color: #D4AF37;
+    --background-color: #F4F1EA;
+    --white-color: #fafafa;
+    --text-color: #1A1A1A;
     --error-color: #a12626;
     --success-color: #245b35;
 }
