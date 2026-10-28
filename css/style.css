@@ -1,22 +1,22 @@
 @charset "utf-8";
 
 /*
-   Harbor Light Books & Stationery
-   Phase 3 - JavaScript and Interactive Features
+    Harbor Light Books & Stationery
+    Phase 3 - Complete Mobile-Ready Stylesheet
 */
 
 :root {
-    --primary-color: #6B1D2F;
-    --secondary-color: #1D2D44;
-    --accent-color: #D4AF37;
-    --background-color: #F4F1EA;
-    --white-color: #fafafa;
-    --text-color: #1A1A1A;
-    --error-color: #a12626;
-    --success-color: #245b35;
+    --primary-color: #17354A;    
+    --secondary-color: #3d141a; 
+    --accent-color: #C1A365;     
+    --background-color: #EDE4D2; 
+    --white-color: #FAF6ED;      
+    --text-color: #2A2521;       
+    --error-color: #A12626;
+    --success-color: #245B35;
 }
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -46,9 +46,7 @@ a:hover {
     color: var(--accent-color);
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     margin-top: 0;
     color: var(--primary-color);
     line-height: 1.2;
@@ -76,12 +74,12 @@ p {
     margin: 0 auto;
 }
 
-
 header {
     background-color: var(--primary-color);
     color: var(--white-color);
     padding: 2rem 0;
     text-align: center;
+    border-bottom: 3px solid var(--accent-color);
 }
 
 .brand {
@@ -90,12 +88,22 @@ header {
     text-align: center;
 }
 
+/* Contrast container so the lighthouse logo pops against the header */
+.brand-logo-wrapper {
+    display: inline-block;
+    padding: 6px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 0.5rem;
+}
+
 .brand-logo {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     display: block;
-    margin: 0 auto 0.5rem auto;
+    margin: 0 auto;
 }
 
 .site-title {
@@ -113,14 +121,13 @@ header > p:not(.site-title) {
 }
 
 /* Mobile Navigation Button */
-
 .menu-toggle {
     display: none;
     margin: 1rem auto;
     padding: 0.7rem 1.4rem;
     border: 2px solid var(--accent-color);
     border-radius: 6px;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: var(--white-color);
     font-family: inherit;
     font-size: 1rem;
@@ -134,7 +141,6 @@ header > p:not(.site-title) {
 }
 
 /* Navigation */
-
 nav ul {
     display: flex;
     justify-content: center;
@@ -171,7 +177,6 @@ textarea:focus-visible {
 }
 
 /* Main Sections */
-
 section {
     padding: 4rem 0;
 }
@@ -218,7 +223,6 @@ section {
 }
 
 /* About Page */
-
 #about {
     background-color: var(--white-color);
     padding: 3rem;
@@ -232,7 +236,6 @@ section {
 }
 
 /* Services Page */
-
 #services {
     background-color: var(--background-color);
 }
@@ -256,7 +259,6 @@ section {
 }
 
 /* FAQ Accordion */
-
 .faq-section {
     padding: 3rem 0;
 }
@@ -316,7 +318,6 @@ section {
 }
 
 /* Contact Page and Form */
-
 #contact {
     padding: 3rem;
     background-color: var(--white-color);
@@ -372,7 +373,6 @@ textarea:focus {
 }
 
 /* Form Validation Messages */
-
 .error-message {
     margin: 0.4rem 0 0;
     color: var(--error-color);
@@ -402,7 +402,6 @@ textarea.invalid {
 }
 
 /* Footer */
-
 footer {
     padding: 2rem;
     background-color: var(--primary-color);
@@ -415,7 +414,6 @@ footer p {
 }
 
 /* Tablet Layout */
-
 @media (max-width: 900px) {
     header {
         padding: 1.75rem 0;
@@ -439,8 +437,7 @@ footer p {
     }
 }
 
-/* Mobile Layout and Expandable Menu */
-
+/* Mobile Layout and Expandable Menu (Fully Restored) */
 @media (max-width: 600px) {
     .container {
         width: 92%;
