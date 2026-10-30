@@ -1,1 +1,544 @@
+@charset "utf-8";
 
+/*
+    Harbor Light Books & Stationery
+    Phase 3 - Complete Mobile-Ready Stylesheet
+*/
+
+:root {
+    --primary-color: #17354A;    
+    --secondary-color: #0d412f; 
+    --accent-color: #C1A365;     
+    --background-color: #EDE4D2; 
+    --white-color: #FAF6ED;      
+    --text-color: #2A2521;       
+    --error-color: #A12626;
+    --success-color: #245B35;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.brand {
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+/* Contrast container so the lighthouse logo pops against the header */
+.brand-logo-wrapper {
+    display: inline-block;
+    padding: 6px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 0.5rem;
+}
+
+.brand-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.site-title {
+    color: var(--white-color);
+    font-size: 2rem; 
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+}
+
+header .tagline,
+header > p:not(.site-title) {
+    margin: 0 1rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Mobile Navigation Button */
+.menu-toggle {
+    display: none;
+    margin: 1rem auto;
+    padding: 0.7rem 1.4rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-toggle:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    min-width: 90px;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    color: var(--white-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+nav a:focus-visible,
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+/* Main Sections */
+section {
+    padding: 4rem 0;
+}
+
+#home {
+    min-height: 450px;
+    padding: 5rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    text-align: center;
+}
+
+#home h1 {
+    color: var(--white-color);
+    font-size: clamp(2rem, 6vw, 2.75rem);
+}
+
+#home p {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home a,
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#home a:hover,
+.button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* About Page */
+#about {
+    background-color: var(--white-color);
+    padding: 3rem;
+}
+
+#about img {
+    width: 100%;
+    max-width: 700px;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+}
+
+/* Services Page */
+#services {
+    background-color: var(--background-color);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    padding: 1.5rem;
+    background-color: var(--white-color);
+    border-top: 5px solid var(--accent-color);
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h2 {
+    margin-bottom: 0.5rem;
+}
+
+/* FAQ Accordion */
+.faq-section {
+    padding: 3rem 0;
+}
+
+.faq-section > p {
+    margin-bottom: 1.5rem;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #d7d2ca;
+    border-radius: 6px;
+    background-color: var(--white-color);
+    overflow: hidden;
+}
+
+.faq-item h3 {
+    margin: 0;
+}
+
+.faq-question {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq-question:hover,
+.faq-question[aria-expanded="true"] {
+    background-color: #e6eee7;
+}
+
+.faq-question::after {
+    content: "+";
+    float: right;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+.faq-question[aria-expanded="true"]::after {
+    content: "−";
+}
+
+.faq-answer {
+    padding: 0 1rem 1rem;
+}
+
+.faq-answer p {
+    margin-bottom: 0;
+}
+
+/* Contact Page and Form */
+#contact {
+    padding: 3rem;
+    background-color: var(--white-color);
+}
+
+#contact p {
+    max-width: 800px;
+}
+
+#contact strong {
+    color: var(--primary-color);
+}
+
+form {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: var(--white-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+}
+
+/* Form Validation Messages */
+.error-message {
+    margin: 0.4rem 0 0;
+    color: var(--error-color);
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+input.invalid,
+textarea.invalid {
+    border: 2px solid var(--error-color);
+}
+
+#form-feedback {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+#form-feedback.error {
+    color: var(--error-color);
+}
+
+#form-feedback.success {
+    padding: 1rem;
+    border-left: 5px solid var(--success-color);
+    background-color: #e8f3e9;
+    color: var(--success-color);
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Tablet Layout */
+@media (max-width: 900px) {
+    header {
+        padding: 1.75rem 0;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #home {
+        min-height: auto;
+        padding: 4rem 1.5rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+}
+
+/* Mobile Layout and Expandable Menu (Fully Restored) */
+@media (max-width: 600px) {
+    .container {
+        width: 92%;
+    }
+
+    header {
+        padding: 1.5rem 0;
+    }
+
+    .brand {
+        gap: 8px;
+    }
+
+    .brand-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .site-title {
+        font-size: 1.5rem;
+    }
+
+    header .tagline,
+    header > p:not(.site-title) {
+        font-size: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        padding: 0 1rem;
+        margin-top: 1rem;
+    }
+
+    header nav.open {
+        display: block !important;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 0.8rem 1rem;
+    }
+
+    section {
+        padding: 2.5rem 0;
+    }
+
+    #home {
+        padding: 3rem 1rem;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home a,
+    .button {
+        width: 100%;
+        max-width: 300px;
+        padding: 0.85rem 1rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.25rem;
+    }
+
+    #about,
+    #contact {
+        padding: 2rem 1.25rem;
+    }
+
+    .faq-section {
+        padding: 2rem 0;
+    }
+
+    form {
+        margin-top: 1.5rem;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

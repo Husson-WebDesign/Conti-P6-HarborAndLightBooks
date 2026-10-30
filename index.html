@@ -1,16 +1,80 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Website Project</title>
+
+    <title>Harbor Light Books &amp; Stationery</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
+
 <body>
 
-    <h1>Web Design Client Project</h1>
-    <p>Developer: Shane Conti</p>
-    <p>This website is being developed as part of my Web Design course.</p>
+    <header>
+        <div class="brand">
+            <img src="images/lighthouse.svg"
+                 alt="Lighthouse logo"
+                 class="brand-logo">
 
-    <p>Project setup completed successfully.</p>
+            <p class="site-title">Harbor Light Books &amp; Stationery</p>
+        </div>
+
+        <p class="tagline">Books, stories, and community in the heart of Bangor.</p>
+
+        <button class="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+            Menu
+        </button>
+
+        <nav id="main-navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="home">
+
+            <h1> Stories, Stationery, and Shared Moments</h1>
+
+            <p>
+            
+                Step inside to explore a carefully curated selection of fine journals, stationery, literary gifts as well as, fiction, mystery, and other works by Maine authors.
+            </p>
+
+            <p>
+               Beyond the shelves, we are a gathering place where readers and writers come together for readings, story programs, book discussions, and community events.
+            </p>
+
+            <p>
+                Whether you are searching for your next great page-turner or looking for a cozy place to spend the afternoon, our friendly staff is always here to help you find something special.
+                 
+                Grab a warm cup of tea, browse our hand-picked staff recommendations, and become a part of our growing local literary family. Come visit us today and see where your next adventure begins!
+            </p>
+
+            <a href="services.html">Explore Our Services</a>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                &copy; 2026 Harbor Light Books &amp; Stationery.
+                All rights reserved.
+            </p>
+        </div>
+    </footer>
+
 </body>
 </html>
