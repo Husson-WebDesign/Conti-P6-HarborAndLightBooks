@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 580" width="100%" height="100%">
+  <style>
+    .white-stroke {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .white-fill {
+      fill: #FFFFFF;
+    }
+    .light-ray {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-linecap: round;
+    }
+  </style>
+
+  <!-- Radiating Light Beams -->
+  <g id="Light-Rays">
+    <path class="light-ray" stroke-width="2.5" opacity="0.9" d="M250 80 L390 25" />
+    <path class="light-ray" stroke-width="1.5" stroke-dasharray="5,5" opacity="0.5" d="M250 80 L430 50" />
+    
+    <path class="light-ray" stroke-width="2.5" opacity="0.9" d="M250 80 L110 25" />
+    <path class="light-ray" stroke-width="1.5" stroke-dasharray="5,5" opacity="0.5" d="M250 80 L70 50" />
+
+    <path class="light-ray" stroke-width="2" opacity="0.7" d="M250 80 L420 95" />
+    <path class="light-ray" stroke-width="2" opacity="0.7" d="M250 80 L80 95" />
+  </g>
+
+  <!-- Lighthouse (Sitting on top of the stack) -->
+  <g id="Lighthouse">
+    <!-- Glowing Beacon Light Center -->
+    <circle cx="250" cy="80" r="5" class="white-fill" />
+
+    <!-- Dome Roof & Finial -->
+    <path class="white-stroke" stroke-width="3" d="M234 63 C234 48, 266 48, 266 63 Z" />
+    <line class="white-stroke" stroke-width="2.5" x1="250" y1="48" x2="250" y2="39" />
+
+    <!-- Lantern Room Glass Box -->
+    <rect class="white-stroke" stroke-width="3" x="236" y="63" width="28" height="24" rx="1" />
+    <line class="white-stroke" stroke-width="1.5" opacity="0.6" x1="250" y1="63" x2="250" y2="87" />
+
+    <!-- Balcony Railing -->
+    <path class="white-stroke" stroke-width="3.5" d="M226 87 L274 87" />
+    <path class="white-stroke" stroke-width="2" d="M230 87 L230 93" />
+    <path class="white-stroke" stroke-width="2" d="M270 87 L270 93" />
+
+    <!-- Tapered Tower Body -->
+    <path class="white-stroke" stroke-width="3.5" d="M233 93 L220 190 L280 190 L267 93 Z" />
+
+    <!-- Decorative Tower Stripe Bands -->
+    <path class="white-stroke" stroke-width="2.5" opacity="0.8" d="M229 125 L271 125" />
+    <path class="white-stroke" stroke-width="2.5" opacity="0.8" d="M224 160 L276 160" />
+
+    <!-- Tower Window -->
+    <rect class="white-stroke" stroke-width="2" x="245" y="137" width="10" height="15" rx="5" />
+
+    <!-- Lighthouse Base Platform -->
+    <path class="white-stroke" stroke-width="3.5" d="M212 190 L288 190 L288 196 L212 196 Z" />
+  </g>
+
+  <!-- Stack of 3 Skinnier Realistic Books (With distinct spine wraps, pages texturing, and cover edges) -->
+  <g id="Book-Stack">
+
+    <!-- Book 1 (Top Book) -->
+    <g id="Book-1">
+      <!-- Main Cover / Block -->
+      <path class="white-stroke" stroke-width="3" d="M190 196 H310 V236 H190 Z" />
+      <!-- Left Spine Curve (Rounded book back) -->
+      <path class="white-stroke" stroke-width="2.5" d="M190 196 C180 203, 180 229, 190 236" />
+      <!-- Right Page Edge / Crease -->
+      <path class="white-stroke" stroke-width="1.5" opacity="0.7" d="M304 196 V236" />
+      <path class="white-stroke" stroke-width="1" opacity="0.4" d="M307 196 V236" />
+      <!-- Spine Ribbon/Band Detail -->
+      <line class="white-stroke" stroke-width="2" opacity="0.5" x1="196" y1="202" x2="196" y2="230" />
+    </g>
+
+    <!-- Book 2 (Middle Book - Offset Right) -->
+    <g id="Book-2">
+      <path class="white-stroke" stroke-width="3" d="M175 236 H325 V278 H175 Z" />
+      <!-- Right Spine Curve -->
+      <path class="white-stroke" stroke-width="2.5" d="M325 236 C335 244, 335 270, 325 278" />
+      <!-- Left Page Edge / Crease -->
+      <path class="white-stroke" stroke-width="1.5" opacity="0.7" d="M181 236 V278" />
+      <path class="white-stroke" stroke-width="1" opacity="0.4" d="M178 236 V278" />
+      <!-- Spine Ribbon/Band Detail -->
+      <line class="white-stroke" stroke-width="2" opacity="0.5" x1="319" y1="243" x2="319" y2="271" />
+    </g>
+
+    <!-- Book 3 (Bottom Book - Widest Base) -->
+    <g id="Book-3">
+      <path class="white-stroke" stroke-width="3.5" d="M160 278 H340 V324 H160 Z" />
+      <!-- Left Spine Curve -->
+      <path class="white-stroke" stroke-width="2.5" d="M160 278 C150 287, 150 315, 160 324" />
+      <!-- Right Page Edge / Crease -->
+      <path class="white-stroke" stroke-width="1.5" opacity="0.7" d="M334 278 V324" />
+      <path class="white-stroke" stroke-width="1" opacity="0.4" d="M337 278 V324" />
+      <!-- Spine Ribbon/Band Detail -->
+      <line class="white-stroke" stroke-width="2" opacity="0.5" x1="166" y1="286" x2="166" y2="316" />
+    </g>
+
+  </g>
+</svg>
