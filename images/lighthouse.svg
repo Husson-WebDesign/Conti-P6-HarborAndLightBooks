@@ -1,7 +1,104 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-<g id="SVGRepo_iconCarrier"> <style type="text/css">  .st0{fill:#000000;}  </style> <g> <polygon class="st0" points="150.109,87.047 0,54 0,26.156 150.109,69.656 "/> <polygon class="st0" points="150.109,118.375 0,151.422 0,179.266 150.109,135.766 "/> <polygon class="st0" points="361.891,118.375 512,151.422 512,179.266 361.891,135.766 "/> <polygon class="st0" points="361.891,87.047 512,54 512,26.156 361.891,69.656 "/> <path class="st0" d="M339.797,479.219l-16.203-196.344l31.906-25.063v-16.828h-14.969v-52.5h10.359 c8.313,0,15.047-6.75,15.047-15.063s-6.734-15.047-15.047-15.047h-22.125v-24.797c0-34.672-24.281-63.641-56.766-70.938V16.781 c0-8.828-7.172-16-16-16c-8.844,0-16,7.172-16,16v45.859c-32.484,7.297-56.766,36.266-56.766,70.938v24.797h-22.109 c-8.328,0-15.063,6.734-15.063,15.047s6.734,15.063,15.063,15.063h10.344v52.5H156.5v16.828l31.906,25.063l-16.203,196.344H128v32 h41.563h172.875H384v-32H339.797z M256,412.484c8.844,0,16,7.156,16,16v20h-32v-20C240,419.641,247.172,412.484,256,412.484z M240,360.484v-20c0-8.844,7.172-16,16-16c8.844,0,16,7.156,16,16v20H240z M302.266,188.484h22.266v52.5h-22.266V188.484z M286.266,240.984H264v-52.5h22.266V240.984z M240,124.484c0-8.844,7.172-16,16-16c8.844,0,16,7.156,16,16v20h-32V124.484z M225.734,188.484H248v52.5h-22.266V188.484z M187.469,240.984v-52.5h22.266v52.5H187.469z"/> </g> </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 580" width="100%" height="100%">
+  <style>
+    .white-stroke {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .white-fill {
+      fill: #FFFFFF;
+    }
+    .light-ray {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-linecap: round;
+    }
+  </style>
+
+  <!-- Radiating Light Beams -->
+  <g id="Light-Rays">
+    <path class="light-ray" stroke-width="2.5" opacity="0.9" d="M250 80 L390 25" />
+    <path class="light-ray" stroke-width="1.5" stroke-dasharray="5,5" opacity="0.5" d="M250 80 L430 50" />
+    
+    <path class="light-ray" stroke-width="2.5" opacity="0.9" d="M250 80 L110 25" />
+    <path class="light-ray" stroke-width="1.5" stroke-dasharray="5,5" opacity="0.5" d="M250 80 L70 50" />
+
+    <path class="light-ray" stroke-width="2" opacity="0.7" d="M250 80 L420 95" />
+    <path class="light-ray" stroke-width="2" opacity="0.7" d="M250 80 L80 95" />
+  </g>
+
+  <!-- Lighthouse (Sitting on top of the stack) -->
+  <g id="Lighthouse">
+    <!-- Glowing Beacon Light Center -->
+    <circle cx="250" cy="80" r="5" class="white-fill" />
+
+    <!-- Dome Roof & Finial -->
+    <path class="white-stroke" stroke-width="3" d="M234 63 C234 48, 266 48, 266 63 Z" />
+    <line class="white-stroke" stroke-width="2.5" x1="250" y1="48" x2="250" y2="39" />
+
+    <!-- Lantern Room Glass Box -->
+    <rect class="white-stroke" stroke-width="3" x="236" y="63" width="28" height="24" rx="1" />
+    <line class="white-stroke" stroke-width="1.5" opacity="0.6" x1="250" y1="63" x2="250" y2="87" />
+
+    <!-- Balcony Railing -->
+    <path class="white-stroke" stroke-width="3.5" d="M226 87 L274 87" />
+    <path class="white-stroke" stroke-width="2" d="M230 87 L230 93" />
+    <path class="white-stroke" stroke-width="2" d="M270 87 L270 93" />
+
+    <!-- Tapered Tower Body -->
+    <path class="white-stroke" stroke-width="3.5" d="M233 93 L220 190 L280 190 L267 93 Z" />
+
+    <!-- Decorative Tower Stripe Bands -->
+    <path class="white-stroke" stroke-width="2.5" opacity="0.8" d="M229 125 L271 125" />
+    <path class="white-stroke" stroke-width="2.5" opacity="0.8" d="M224 160 L276 160" />
+
+    <!-- Tower Window -->
+    <rect class="white-stroke" stroke-width="2" x="245" y="137" width="10" height="15" rx="5" />
+
+    <!-- Lighthouse Base Platform -->
+    <path class="white-stroke" stroke-width="3.5" d="M212 190 L288 190 L288 196 L212 196 Z" />
+  </g>
+
+  <!-- Stack of 3 Skinnier Realistic Books (With distinct spine wraps, pages texturing, and cover edges) -->
+  <g id="Book-Stack">
+
+    <!-- Book 1 (Top Book) -->
+    <g id="Book-1">
+      <!-- Main Cover / Block -->
+      <path class="white-stroke" stroke-width="3" d="M190 196 H310 V236 H190 Z" />
+      <!-- Left Spine Curve (Rounded book back) -->
+      <path class="white-stroke" stroke-width="2.5" d="M190 196 C180 203, 180 229, 190 236" />
+      <!-- Right Page Edge / Crease -->
+      <path class="white-stroke" stroke-width="1.5" opacity="0.7" d="M304 196 V236" />
+      <path class="white-stroke" stroke-width="1" opacity="0.4" d="M307 196 V236" />
+      <!-- Spine Ribbon/Band Detail -->
+      <line class="white-stroke" stroke-width="2" opacity="0.5" x1="196" y1="202" x2="196" y2="230" />
+    </g>
+
+    <!-- Book 2 (Middle Book - Offset Right) -->
+    <g id="Book-2">
+      <path class="white-stroke" stroke-width="3" d="M175 236 H325 V278 H175 Z" />
+      <!-- Right Spine Curve -->
+      <path class="white-stroke" stroke-width="2.5" d="M325 236 C335 244, 335 270, 325 278" />
+      <!-- Left Page Edge / Crease -->
+      <path class="white-stroke" stroke-width="1.5" opacity="0.7" d="M181 236 V278" />
+      <path class="white-stroke" stroke-width="1" opacity="0.4" d="M178 236 V278" />
+      <!-- Spine Ribbon/Band Detail -->
+      <line class="white-stroke" stroke-width="2" opacity="0.5" x1="319" y1="243" x2="319" y2="271" />
+    </g>
+
+    <!-- Book 3 (Bottom Book - Widest Base) -->
+    <g id="Book-3">
+      <path class="white-stroke" stroke-width="3.5" d="M160 278 H340 V324 H160 Z" />
+      <!-- Left Spine Curve -->
+      <path class="white-stroke" stroke-width="2.5" d="M160 278 C150 287, 150 315, 160 324" />
+      <!-- Right Page Edge / Crease -->
+      <path class="white-stroke" stroke-width="1.5" opacity="0.7" d="M334 278 V324" />
+      <path class="white-stroke" stroke-width="1" opacity="0.4" d="M337 278 V324" />
+      <!-- Spine Ribbon/Band Detail -->
+      <line class="white-stroke" stroke-width="2" opacity="0.5" x1="166" y1="286" x2="166" y2="316" />
+    </g>
+
+  </g>
+</svg>

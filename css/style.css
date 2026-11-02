@@ -8,10 +8,10 @@
 :root {
     --primary-color: #17354A;    
     --secondary-color: #0d412f; 
-    --accent-color: #C1A365;     
+    --accent-color: #C1A365;    
     --background-color: #EDE4D2; 
     --white-color: #FAF6ED;      
-    --text-color: #2A2521;       
+    --text-color: #2A2521;      
     --error-color: #A12626;
     --success-color: #245B35;
 }
@@ -88,7 +88,6 @@ header {
     text-align: center;
 }
 
-/* Contrast container so the lighthouse logo pops against the header */
 .brand-logo-wrapper {
     display: inline-block;
     padding: 6px;
@@ -220,6 +219,30 @@ section {
 .button:hover {
     background-color: var(--primary-color);
     color: var(--white-color);
+}
+
+/* Homepage Grid & Starting Path Additions */
+.grid-3, .visit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.starting-paths {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.card, .category-item, .event-callout {
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: var(--white-color);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
 /* About Page */
@@ -423,7 +446,7 @@ footer p {
         gap: 0.5rem;
     }
 
-    .service-grid {
+    .service-grid, .grid-3 {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -437,7 +460,7 @@ footer p {
     }
 }
 
-/* Mobile Layout and Expandable Menu (Fully Restored) */
+/* Mobile Layout and Expandable Menu */
 @media (max-width: 600px) {
     .container {
         width: 92%;
@@ -510,12 +533,12 @@ footer p {
         padding: 0.85rem 1rem;
     }
 
-    .service-grid {
+    .service-grid, .grid-3 {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
-    .service-card {
+    .service-card, .card, .category-item {
         padding: 1.25rem;
     }
 
