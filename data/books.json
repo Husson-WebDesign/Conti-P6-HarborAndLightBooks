@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "title": "The Lighthouse at Harbor Point",
+        "author": "Sample Author",
+        "category": "Fiction",
+        "description": "A sample story about a small coastal town and the people who call it home."
+    },
+    {
+        "id": 2,
+        "title": "Mystery on the Maine Coast",
+        "author": "Sample Author",
+        "category": "Mystery",
+        "description": "A sample mystery set along the rocky coast of Maine."
+    },
+    {
+        "id": 3,
+        "title": "Discovering New England",
+        "author": "Sample Author",
+        "category": "Nonfiction",
+        "description": "A sample introduction to the history and scenery of New England."
+    },
+    {
+        "id": 4,
+        "title": "The Little Blue Sailboat",
+        "author": "Sample Author",
+        "category": "Children's Books",
+        "description": "A sample children's story about adventure and friendship."
+    },
+    {
+        "id": 5,
+        "title": "Stories from the Pine Tree State",
+        "author": "Sample Author",
+        "category": "Maine Authors",
+        "description": "A sample collection inspired by Maine communities and traditions."
+    },
+    {
+        "id": 6,
+        "title": "My Reading Journal",
+        "author": "Harbor Light Sample Collection",
+        "category": "Journals",
+        "description": "A sample journal for recording favorite books and reading notes."
+    },
+    {
+        "id": 7,
+        "title": "Coastal Notes Stationery Set",
+        "author": "Harbor Light Sample Collection",
+        "category": "Stationery",
+        "description": "A sample stationery set for letters, notes, and everyday writing."
+    },
+    {
+        "id": 8,
+        "title": "The Book Lover Gift Box",
+        "author": "Harbor Light Sample Collection",
+        "category": "Literary Gifts",
+        "description": "A sample gift idea for readers and book lovers."
+    }
+]
