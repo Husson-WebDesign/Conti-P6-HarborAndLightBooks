@@ -1,231 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Harbor Light Books &amp; Stationery</title>
-
+    <title>Harbor Light Books & Stationery | Independent Bookstore in Bangor</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
 </head>
-
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Header -->
     <header>
-        <div class="brand">
-            <img src="images/lighthouse.svg"
-                 alt="Harbor Light lighthouse logo"
-                 class="brand-logo">
-
-            <p class="site-title">Harbor Light Books &amp; Stationery</p>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <svg class="logo-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                <span class="logo-text">Harbor Light Books</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="books.html">Books & Stationery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Visit Us</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <p class="tagline">Books, stories, and community in the heart of Bangor.</p>
-
-        <button class="menu-toggle"
-                type="button"
-                aria-expanded="false"
-                aria-controls="main-navigation">
-            Menu
-        </button>
-
-        <nav id="main-navigation" aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-
-    <main class="container">
-
-        <!-- Welcome Section -->
-        <section class="hero-section">
-
+    <main id="main-content">
+        <section class="hero">
             <div class="hero-content">
-                <h1>Stories, Stationery, and Shared Moments</h1>
-
-                <p>
-                    Discover a welcoming bookstore concept featuring
-                    sample book collections, journals, Maine-inspired
-                    literature, and thoughtful gifts for readers.
-                </p>
-
-                <div class="starting-paths">
-                    <a href="services.html#childrens" class="btn">Children's Books</a>
-                    <a href="services.html#recommendations" class="btn">Book Recommendations</a>
-                    <a href="services.html#events" class="btn">Community Events</a>
-                    <a href="#visit-hours" class="btn">Location &amp; Hours</a>
+                <h1>Discover Stories, Stationery & Community in Bangor</h1>
+                <p>Welcome to your neighborhood independent bookstore. Explore curated reads, fine stationery, and welcoming literary gatherings.</p>
+                <div class="hero-buttons">
+                    <a href="books.html" class="btn btn-primary">Discover Our Books</a>
+                    <a href="contact.html" class="btn btn-secondary">Plan Your Visit</a>
                 </div>
             </div>
-
-            <div class="hero-image-wrapper">
-                <img src="images/storefront.jpg"
-                     alt="Illustrative bookstore storefront image for the fictional Harbor Light project"
-                     class="hero-img">
-                <p class="image-note">
-                    Illustrative image used for this student project.
-                </p>
-            </div>
-
         </section>
 
+        <section class="intro-section" style="padding-top: 4rem;">
+            <div class="grid-2">
+                <div>
+                    <h2 class="section-title" style="text-align: left;">A Cozy Corner for Readers</h2>
+                    <p style="margin-bottom: 1.5rem; color: #4a5568;">Whether you are hunting for a compelling new fiction release, a local Maine author, artisan notebooks, or thoughtful literary gifts, Harbor Light provides a warm, welcoming haven for all book lovers.</p>
+                    <a href="about.html" class="btn btn-primary">Read Our Story</a>
+                </div>
+                <div>
+                    <img src="images/bookstore-interior.jpg" alt="Interior view of Harbor Light bookstore shelves" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </section>
 
-        <!-- Store Offerings -->
-        <section class="section-block">
-            <h2>What You'll Find Inside</h2>
-
-            <div class="card-grid">
-
-                <article class="card">
+        <section class="content-section">
+            <h2 class="section-title">Explore What We Offer</h2>
+            <div class="grid-3">
+                <div class="card">
                     <h3>Curated Books</h3>
-                    <p>
-                        Sample collection categories include fiction,
-                        nonfiction, poetry, mystery, and books by Maine authors.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3>Fine Stationery</h3>
-                    <p>
-                        Example stationery selections include notebooks,
-                        journals, pens, and paper goods for writing and sketching.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3>Literary Gifts</h3>
-                    <p>
-                        Example gift ideas include bookmarks, reading
-                        accessories, and keepsakes for book lovers.
-                    </p>
-                </article>
-
+                    <p>From gripping mysteries and thought-provoking nonfiction to engaging children's literature and regional Maine titles.</p>
+                    <a href="books.html" class="btn btn-primary" style="align-self: flex-start;">Browse Books</a>
+                </div>
+                <div class="card">
+                    <h3>Stationery & Gifts</h3>
+                    <p>Fine journals, fountain pens, greeting cards, and unique literary accessories to inspire your daily writing.</p>
+                    <a href="books.html" class="btn btn-primary" style="align-self: flex-start;">View Stationery</a>
+                </div>
+                <div class="card">
+                    <h3>Community Events</h3>
+                    <p>Join our book discussions, author readings, and weekend children's story hours in a welcoming setting.</p>
+                    <a href="events.html" class="btn btn-primary" style="align-self: flex-start;">Explore Events</a>
+                </div>
             </div>
         </section>
-
-
-        <!-- Featured Categories -->
-        <section class="section-block">
-            <h2>Explore Featured Categories</h2>
-
-            <div class="card-grid">
-
-                <article class="card">
-                    <h3>Maine Authors</h3>
-                    <p>
-                        Explore a sample category featuring stories
-                        and voices inspired by Maine.
-                    </p>
-                    <a href="services.html" class="card-link">Explore Book Categories &rarr;</a>
-                </article>
-
-                <article class="card">
-                    <h3>Fiction &amp; Mystery</h3>
-                    <p>
-                        Discover sample categories featuring mysteries,
-                        adventures, and enjoyable fiction.
-                    </p>
-                    <a href="services.html" class="card-link">Explore Fiction &rarr;</a>
-                </article>
-
-                <article class="card">
-                    <h3>Young Readers</h3>
-                    <p>
-                        Sample categories include picture books,
-                        middle-grade adventures, and young adult stories.
-                    </p>
-                    <a href="services.html#childrens" class="card-link">View Children's Books &rarr;</a>
-                </article>
-
-            </div>
-        </section>
-
-
-        <!-- Events -->
-        <section class="section-block">
-            <h2>Community Events</h2>
-
-            <p>
-                The fictional bookstore concept includes example
-                community activities such as author-style readings,
-                children's story programs, and book discussions.
-                These are examples, not scheduled events.
-            </p>
-
-            <a href="services.html#events" class="btn">Explore Event Examples</a>
-        </section>
-
-
-        <!-- About -->
-        <section class="section-block">
-            <h2>Behind the Shelves</h2>
-
-            <p>
-                Harbor Light is imagined as a welcoming neighborhood
-                bookstore for readers, families, students, and local
-                writers. The concept focuses on bringing people
-                together through books, writing, and creativity.
-            </p>
-
-            <a href="about.html" class="card-link">Read Our Story &rarr;</a>
-        </section>
-
-
-        <!-- Location and Hours -->
-        <section id="visit-hours" class="section-block">
-            <h2>Plan Your Visit</h2>
-
-            <p>
-                The following location and hours are fictional examples
-                created for this web design project.
-            </p>
-
-            <div class="card-grid">
-
-                <article class="card">
-                    <h3>Sample Location</h3>
-                    <p>123 Main Street, Bangor, ME 04401</p>
-                    <a href="contact.html" class="card-link">View Contact Information &rarr;</a>
-                </article>
-
-                <article class="card">
-                    <h3>Sample Store Hours</h3>
-                    <p><strong>Monday – Saturday:</strong> 9:00 AM – 6:00 PM</p>
-                    <p><strong>Sunday:</strong> 10:00 AM – 4:00 PM</p>
-                    <p>These hours are examples only.</p>
-                </article>
-
-            </div>
-        </section>
-
     </main>
 
-
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>
-                Harbor Light Books &amp; Stationery is a fictional
-                student project. All business details and offerings
-                are sample content.
-            </p>
-
-            <p>
-                <a href="about.html">About</a> |
-                <a href="services.html">Services</a> |
-                <a href="contact.html">Contact</a>
-            </p>
-
-            <p>&copy; 2026 Harbor Light Books &amp; Stationery. All rights reserved.</p>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Harbor Light Books & Stationery</h4>
+                <p>Your independent neighborhood bookstore in Bangor, Maine.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="books.html">Books & Stationery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Visit & Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Hours & Location</h4>
+                <p>124 Hammond Street<br>Bangor, ME 04401</p>
+                <p>Tue–Sat: 10am – 6pm<br>Sun: 11am – 4pm</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Harbor Light Books & Stationery. Class project demonstration site.</p>
         </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

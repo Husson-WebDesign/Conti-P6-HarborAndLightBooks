@@ -1,34 +1,20 @@
 [
-    {
-        "id": 1,
-        "title": "Community Book Club",
-        "category": "Reading",
-        "description": "A sample gathering where readers can discuss a selected book and share their thoughts.",
-        "date": "Sample date to be announced",
-        "time": "Sample time to be announced"
-    },
-    {
-        "id": 2,
-        "title": "Young Readers Story Time",
-        "category": "Families",
-        "description": "A sample family activity featuring children's stories and reading activities.",
-        "date": "Sample date to be announced",
-        "time": "Sample time to be announced"
-    },
-    {
-        "id": 3,
-        "title": "Meet a Maine Author",
-        "category": "Authors",
-        "description": "A sample author event idea featuring a discussion about writing and storytelling.",
-        "date": "Sample date to be announced",
-        "time": "Sample time to be announced"
-    },
-    {
-        "id": 4,
-        "title": "Creative Journaling Workshop",
-        "category": "Creative Activities",
-        "description": "A sample workshop idea for exploring journals, writing, and creative expression.",
-        "date": "Sample date to be announced",
-        "time": "Sample time to be announced"
-    }
+  {
+    "title": "Monthly Poetry Circle",
+    "date": "Thursday, November 19, 2026 — 6:00 PM",
+    "location": "In-Store Reading Corner",
+    "description": "Bring your favorite verses or simply listen as local poetry lovers share works that inspire them."
+  },
+  {
+    "title": "Children's Saturday Story Hour",
+    "date": "Saturday, November 21, 2026 — 10:30 AM",
+    "location": "Children's Section",
+    "description": "Join us for morning readings of beloved picture books and interactive storytelling for young readers."
+  },
+  {
+    "title": "Maine Author Spotlight: Local Fiction",
+    "date": "Friday, December 4, 2026 — 5:30 PM",
+    "location": "Main Browsing Area",
+    "description": "An intimate evening reading and Q&A session featuring regional contemporary authors."
+  }
 ]

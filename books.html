@@ -1,125 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Books &amp; Stationery | Harbor Light Books</title>
-
+    <title>Books & Stationery | Harbor Light Books</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
 </head>
-
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header>
-        <div class="brand">
-            <a href="index.html" aria-label="Harbor Light home">
-                <img src="images/lighthouse.svg"
-                     alt="Harbor Light lighthouse logo"
-                     class="brand-logo">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <svg class="logo-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                <span class="logo-text">Harbor Light Books</span>
             </a>
-
-            <p class="site-title">Harbor Light Books &amp; Stationery</p>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html" class="active">Books & Stationery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Visit Us</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <p class="tagline">Books, stories, and community in the heart of Bangor.</p>
-
-        <button class="menu-toggle"
-                type="button"
-                aria-expanded="false"
-                aria-controls="main-navigation">
-            Menu
-        </button>
-
-        <nav id="main-navigation" aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="books.html" aria-current="page">Books</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main class="container">
+    <main id="main-content">
+        <h1 class="section-title">Discover Our Collection</h1>
+        
+        <div class="sample-notice">
+            <strong>Demonstration Notice:</strong> The titles below are sample featured entries for demonstration purposes and do not represent live inventory or an online purchasing system.
+        </div>
 
-        <section class="section-block">
-            <h1>Books &amp; Stationery</h1>
+        <div class="filter-controls">
+            <input type="text" id="searchInput" placeholder="Search by title or author..." aria-label="Search books">
+            <select id="categoryFilter" aria-label="Filter by category">
+                <option value="">All Categories</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Nonfiction">Nonfiction</option>
+                <option value="Children">Children's Books</option>
+                <option value="Maine Authors">Maine Authors</option>
+                <option value="Stationery">Stationery</option>
+            </select>
+        </div>
 
-            <p>
-                Explore the sample collections at Harbor Light Books &amp;
-                Stationery. Browse different reading categories, discover
-                sample titles, and explore items for writing and creativity.
-            </p>
-        </section>
-
-        <section class="section-block">
-            <h2>Find Something to Read</h2>
-
-            <div class="form-group">
-                <label for="book-search">Search by title, author, or keyword:</label>
-                <input type="search"
-                       id="book-search"
-                       placeholder="Search the collection...">
-            </div>
-
-            <div class="form-group">
-                <label for="book-category">Choose a category:</label>
-                <select id="book-category">
-                    <option value="all">All Categories</option>
-                    <option value="Fiction">Fiction</option>
-                    <option value="Mystery">Mystery</option>
-                    <option value="Nonfiction">Nonfiction</option>
-                    <option value="Children's Books">Children's Books</option>
-                    <option value="Maine Authors">Maine Authors</option>
-                    <option value="Journals">Journals</option>
-                    <option value="Stationery">Stationery</option>
-                    <option value="Literary Gifts">Literary Gifts</option>
-                </select>
-            </div>
-
-            <button type="button" id="reset-books" class="button">
-                Clear Search
-            </button>
-
-            <p id="book-status" role="status" aria-live="polite">
-                Loading sample collection...
-            </p>
-
-            <div id="book-list" class="card-grid">
-                <!-- Sample collection items will appear here. -->
-            </div>
-
-            <p id="no-books" hidden>
-                No items match your search. Try another keyword or category.
-            </p>
-        </section>
-
-        <section class="section-block">
-            <h2>Looking for Something Special?</h2>
-
-            <p>
-                Have a particular title or type of stationery in mind?
-                Use the contact page to create a sample inquiry.
-            </p>
-
-            <a href="contact.html" class="btn">Ask a Question</a>
-        </section>
-
+        <div id="booksContainer" class="grid-3">
+            <!-- Dynamically populated from books.json -->
+        </div>
+        <p id="noResultsMsg" style="text-align: center; display: none; margin-top: 2rem; color: #666;">No matching books or stationery found.</p>
     </main>
 
     <footer>
-        <div class="container">
-            <p>
-                &copy; 2026 Harbor Light Books &amp; Stationery.
-                Student web design project. Sample collection.
-            </p>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Harbor Light Books</h4>
+                <p>Curated reading and stationery in Bangor, Maine.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Visit & Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Visit Us</h4>
+                <p>124 Hammond Street, Bangor, ME</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Harbor Light Books & Stationery. Class project demonstration site.</p>
         </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,58 +1,44 @@
 [
-    {
-        "id": 1,
-        "title": "The Lighthouse at Harbor Point",
-        "author": "Sample Author",
-        "category": "Fiction",
-        "description": "A sample story about a small coastal town and the people who call it home."
-    },
-    {
-        "id": 2,
-        "title": "Mystery on the Maine Coast",
-        "author": "Sample Author",
-        "category": "Mystery",
-        "description": "A sample mystery set along the rocky coast of Maine."
-    },
-    {
-        "id": 3,
-        "title": "Discovering New England",
-        "author": "Sample Author",
-        "category": "Nonfiction",
-        "description": "A sample introduction to the history and scenery of New England."
-    },
-    {
-        "id": 4,
-        "title": "The Little Blue Sailboat",
-        "author": "Sample Author",
-        "category": "Children's Books",
-        "description": "A sample children's story about adventure and friendship."
-    },
-    {
-        "id": 5,
-        "title": "Stories from the Pine Tree State",
-        "author": "Sample Author",
-        "category": "Maine Authors",
-        "description": "A sample collection inspired by Maine communities and traditions."
-    },
-    {
-        "id": 6,
-        "title": "My Reading Journal",
-        "author": "Harbor Light Sample Collection",
-        "category": "Journals",
-        "description": "A sample journal for recording favorite books and reading notes."
-    },
-    {
-        "id": 7,
-        "title": "Coastal Notes Stationery Set",
-        "author": "Harbor Light Sample Collection",
-        "category": "Stationery",
-        "description": "A sample stationery set for letters, notes, and everyday writing."
-    },
-    {
-        "id": 8,
-        "title": "The Book Lover Gift Box",
-        "author": "Harbor Light Sample Collection",
-        "category": "Literary Gifts",
-        "description": "A sample gift idea for readers and book lovers."
-    }
+  {
+    "title": "The Coastal Tide",
+    "author": "Evelyn Vance",
+    "category": "Fiction",
+    "description": "A touching novel about family secrets and quiet coastal life in Maine.",
+    "image": "images/storefront.jpg"
+  },
+  {
+    "title": "Pine Tree Whispers",
+    "author": "Arthur Pendelton",
+    "category": "Maine Authors",
+    "description": "An evocative exploration of local folklore and deep woods history.",
+    "image": "images/bookstore-interior.jpg"
+  },
+  {
+    "title": "Midnight at the Lighthouse",
+    "author": "Clara Sterling",
+    "category": "Mystery",
+    "description": "A gripping whodunit set against a stormy New England backdrop.",
+    "image": "images/storefront.jpg"
+  },
+  {
+    "title": "The Little Sailor's Journey",
+    "author": "Samuel Green",
+    "category": "Children",
+    "description": "A beautifully illustrated bedtime story for adventurous young readers.",
+    "image": "images/bookstore-interior.jpg"
+  },
+  {
+    "title": "Leatherbound Journal",
+    "author": "Harbor Light Goods",
+    "category": "Stationery",
+    "description": "Hand-stitched grid pages crafted for daily journaling and sketching.",
+    "image": "images/storefront.jpg"
+  },
+  {
+    "title": "Foundations of Wood & Stone",
+    "author": "Marcus Thorne",
+    "category": "Nonfiction",
+    "description": "A thoughtful historical study of New England architectural heritage.",
+    "image": "images/storefront.jpg"
+  }
 ]

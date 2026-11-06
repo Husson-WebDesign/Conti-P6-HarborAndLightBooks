@@ -1,194 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Contact Us | Harbor Light Books &amp; Stationery</title>
-
+    <title>Visit Us & Contact | Harbor Light Books</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
 </head>
-
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header>
-        <div class="brand">
-            <a href="index.html" aria-label="Harbor Light Books & Stationery home">
-                <img src="images/lighthouse.svg"
-                     alt="Harbor Light lighthouse logo"
-                     class="brand-logo">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <svg class="logo-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                <span class="logo-text">Harbor Light Books</span>
             </a>
-
-            <p class="site-title">Harbor Light Books &amp; Stationery</p>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Books & Stationery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Visit Us</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <p class="tagline">Books, stories, and community in the heart of Bangor.</p>
-
-        <button class="menu-toggle"
-                type="button"
-                aria-expanded="false"
-                aria-controls="main-navigation">
-            Menu
-        </button>
-
-        <nav id="main-navigation" aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html" aria-current="page">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main class="container">
-        <section id="contact">
+    <main id="main-content">
+        <h1 class="section-title">Visit Us & Inquire</h1>
 
-            <h1>Contact Harbor Light</h1>
+        <div class="grid-2" style="align-items: start; margin-bottom: 3rem;">
+            <div>
+                <h2 style="color: var(--primary-teal); margin-bottom: 1rem;">Store Information</h2>
+                <p style="margin-bottom: 0.75rem;"><strong>Address:</strong><br>124 Hammond Street<br>Bangor, ME 04401</p>
+                <p style="margin-bottom: 0.75rem;"><strong>Operating Hours:</strong><br>Tuesday – Saturday: 10:00 AM – 6:00 PM<br>Sunday: 11:00 AM – 4:00 PM<br>Monday: Closed</p>
+                <p style="margin-bottom: 0.75rem;"><strong>Contact Details:</strong><br>Phone: (207) 555-0198<br>Email: hello@harborlightbooks.sample</p>
+            </div>
 
-            <p>
-                Have a question about books, recommendations, stationery,
-                or community events? Use the form below to create a sample
-                inquiry preview.
-            </p>
-
-            <p>
-                <strong>Project location:</strong> Bangor, Maine
-            </p>
-
-            <p>
-                <strong>Sample telephone:</strong> 207-555-0106
-            </p>
-
-            <p>
-                <strong>Sample email:</strong>
-                <a href="mailto:olivia@harborlightbooks.example">
-                    olivia@harborlightbooks.example
-                </a>
-            </p>
-
-            <p>
-                <strong>Sample hours:</strong><br>
-                Monday-Saturday: 9:00 AM-7:00 PM<br>
-                Sunday: 10:00 AM-5:00 PM
-            </p>
-
-            <p>
-                <em>
-                    The contact details and hours above are sample information
-                    for this student project.
-                </em>
-            </p>
-
-            <h2>Preview an Inquiry</h2>
-
-            <p>
-                Complete this form to see a preview of your inquiry.
-                This demonstration does not send or store messages.
-            </p>
-
-            <form id="contact-form" action="#" method="post" novalidate>
-
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text"
-                           id="name"
-                           name="name"
-                           autocomplete="name"
-                           required
-                           aria-describedby="name-error">
-                    <p class="error-message" id="name-error"></p>
+            <div style="background: var(--gray-bg); padding: 2rem; border-radius: 8px;">
+                <h2 style="color: var(--primary-teal); margin-bottom: 1rem;">Preview Inquiry Form</h2>
+                <div class="sample-notice" style="margin-bottom: 1rem;">
+                    <strong>Note:</strong> Because this is a class project hosted on GitHub Pages, messages are not sent or saved. Use this form to preview your inquiry.
                 </div>
 
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email"
-                           id="email"
-                           name="email"
-                           autocomplete="email"
-                           required
-                           aria-describedby="email-error">
-                    <p class="error-message" id="email-error"></p>
+                <form id="inquiryForm">
+                    <div class="form-group">
+                        <label for="inquiryType">Inquiry Type</label>
+                        <select id="inquiryType" required>
+                            <option value="General Question">General Question</option>
+                            <option value="Book Recommendation">Book Recommendation</option>
+                            <option value="Special Order">Special Order Question</option>
+                            <option value="Event Question">Event Question</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visitorName">Your Name</label>
+                        <input type="text" id="visitorName" required placeholder="Jane Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visitorEmail">Your Email</label>
+                        <input type="email" id="visitorEmail" required placeholder="jane@example.com">
+                    </div>
+
+                    <div class="form-group" id="bookDetailsGroup" style="display: none;">
+                        <label for="bookTitleAuthor">Book Title & Author</label>
+                        <input type="text" id="bookTitleAuthor" placeholder="e.g., The Great Gatsby by F. Scott Fitzgerald">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visitorMessage">Message / Details</label>
+                        <textarea id="visitorMessage" rows="4" required placeholder="How can we help you?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Preview Inquiry</button>
+                </form>
+
+                <div id="previewBox" class="preview-box">
+                    <h3 style="color: var(--primary-teal); margin-bottom: 0.5rem;">Inquiry Preview</h3>
+                    <p><strong>Type:</strong> <span id="prevType"></span></p>
+                    <p><strong>Name:</strong> <span id="prevName"></span></p>
+                    <p><strong>Email:</strong> <span id="prevEmail"></span></p>
+                    <p id="prevBookRow" style="display: none;"><strong>Book Details:</strong> <span id="prevBook"></span></p>
+                    <p><strong>Message:</strong> <span id="prevMsg"></span></p>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: #666;">(This is a demonstration preview. No message was transmitted.)</p>
                 </div>
+            </div>
+        </div>
 
-                <div class="form-group">
-                    <label for="inquiry-type">Type of Inquiry:</label>
-                    <select id="inquiry-type"
-                            name="inquiry-type"
-                            required
-                            aria-describedby="inquiry-type-error">
-                        <option value="">Select an inquiry type</option>
-                        <option value="General question">General question</option>
-                        <option value="Book recommendation">Book recommendation</option>
-                        <option value="Special order question">Special order question</option>
-                        <option value="Event question">Event question</option>
-                    </select>
-                    <p class="error-message" id="inquiry-type-error"></p>
+        <!-- FAQ Section -->
+        <section class="content-section" style="margin-top: 4rem;">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <button class="faq-question">Can I place a special order for a book not in stock?<span>+</span></button>
+                    <div class="faq-answer">
+                        <p>Yes! If we do not have a title currently on our shelves, you can submit a special order inquiry with the title and author. We will check availability and notify you.</p>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="book-title">Book Title (optional):</label>
-                    <input type="text"
-                           id="book-title"
-                           name="book-title">
+                <div class="faq-item">
+                    <button class="faq-question">Are dogs allowed in the bookstore?<span>+</span></button>
+                    <div class="faq-answer">
+                        <p>Well-behaved, leashed dogs are always welcome to browse the shop alongside their human companions.</p>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="author">Author (optional):</label>
-                    <input type="text"
-                           id="author"
-                           name="author">
+                <div class="faq-item">
+                    <button class="faq-question">How do I register for community book clubs?<span>+</span></button>
+                    <div class="faq-answer">
+                        <p>You can sign up for our monthly book discussions by stopping by the front desk or sending us a message through our inquiry form selecting "Event Question".</p>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message"
-                              name="message"
-                              rows="6"
-                              required
-                              aria-describedby="message-error"></textarea>
-                    <p class="error-message" id="message-error"></p>
-                </div>
-
-                <button type="submit" class="button">
-                    Create Inquiry Preview
-                </button>
-
-                <button type="reset" class="button">
-                    Clear Form
-                </button>
-
-                <p id="form-feedback" role="status" aria-live="polite"></p>
-
-            </form>
-
-            <section id="inquiry-preview" hidden aria-live="polite">
-                <h2>Inquiry Preview</h2>
-                <div id="preview-content"></div>
-            </section>
-
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>
-                &copy; 2026 Harbor Light Books &amp; Stationery.
-                Student web design project. Sample business information.
-            </p>
-
-            <nav aria-label="Footer navigation">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Harbor Light Books</h4>
+                <p>Your neighborhood bookstore in Bangor, Maine.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="books.html">Books & Stationery</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                    <li><a href="events.html">Events</a></li>
                 </ul>
-            </nav>
+            </div>
+            <div class="footer-col">
+                <h4>Visit Us</h4>
+                <p>124 Hammond Street, Bangor, ME<br>Tue–Sat: 10am – 6pm</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Harbor Light Books & Stationery. Class project demonstration site.</p>
         </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
