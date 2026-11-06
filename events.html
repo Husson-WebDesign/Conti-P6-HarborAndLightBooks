@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events | Harbor Light Books &amp; Stationery</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+            <a href="index.html" aria-label="Harbor Light home">
+                <img src="images/lighthouse.svg"
+                     alt="Harbor Light lighthouse logo"
+                     class="brand-logo">
+            </a>
+
+            <p class="site-title">Harbor Light Books &amp; Stationery</p>
+        </div>
+
+        <p class="tagline">Books, stories, and community in the heart of Bangor.</p>
+
+        <button class="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+            Menu
+        </button>
+
+        <nav id="main-navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="events.html" aria-current="page">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="section-block">
+            <h1>Community Events</h1>
+
+            <p>
+                Books bring people together. Explore these sample event
+                ideas for readers, writers, families, and stationery fans.
+            </p>
+
+            <p>
+                The events below are examples for this student project.
+                They are not confirmed or scheduled events.
+            </p>
+        </section>
+
+        <section class="section-block">
+            <h2>Explore Our Event Ideas</h2>
+
+            <p id="event-status" role="status" aria-live="polite">
+                Loading sample events...
+            </p>
+
+            <div id="event-list" class="card-grid">
+                <!-- Sample events will appear here. -->
+            </div>
+
+            <p id="no-events" hidden>
+                No sample events are currently available.
+            </p>
+        </section>
+
+        <section class="section-block">
+            <h2>Have an Event Question?</h2>
+
+            <p>
+                Use the contact page to create a sample inquiry about
+                community activities or event ideas.
+            </p>
+
+            <a href="contact.html" class="btn">Contact Us</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                &copy; 2026 Harbor Light Books &amp; Stationery.
+                Student web design project. Sample events.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

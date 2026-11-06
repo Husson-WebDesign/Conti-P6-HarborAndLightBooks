@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Books &amp; Stationery | Harbor Light Books</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+            <a href="index.html" aria-label="Harbor Light home">
+                <img src="images/lighthouse.svg"
+                     alt="Harbor Light lighthouse logo"
+                     class="brand-logo">
+            </a>
+
+            <p class="site-title">Harbor Light Books &amp; Stationery</p>
+        </div>
+
+        <p class="tagline">Books, stories, and community in the heart of Bangor.</p>
+
+        <button class="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+            Menu
+        </button>
+
+        <nav id="main-navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="books.html" aria-current="page">Books</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="section-block">
+            <h1>Books &amp; Stationery</h1>
+
+            <p>
+                Explore the sample collections at Harbor Light Books &amp;
+                Stationery. Browse different reading categories, discover
+                sample titles, and explore items for writing and creativity.
+            </p>
+        </section>
+
+        <section class="section-block">
+            <h2>Find Something to Read</h2>
+
+            <div class="form-group">
+                <label for="book-search">Search by title, author, or keyword:</label>
+                <input type="search"
+                       id="book-search"
+                       placeholder="Search the collection...">
+            </div>
+
+            <div class="form-group">
+                <label for="book-category">Choose a category:</label>
+                <select id="book-category">
+                    <option value="all">All Categories</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="Nonfiction">Nonfiction</option>
+                    <option value="Children's Books">Children's Books</option>
+                    <option value="Maine Authors">Maine Authors</option>
+                    <option value="Journals">Journals</option>
+                    <option value="Stationery">Stationery</option>
+                    <option value="Literary Gifts">Literary Gifts</option>
+                </select>
+            </div>
+
+            <button type="button" id="reset-books" class="button">
+                Clear Search
+            </button>
+
+            <p id="book-status" role="status" aria-live="polite">
+                Loading sample collection...
+            </p>
+
+            <div id="book-list" class="card-grid">
+                <!-- Sample collection items will appear here. -->
+            </div>
+
+            <p id="no-books" hidden>
+                No items match your search. Try another keyword or category.
+            </p>
+        </section>
+
+        <section class="section-block">
+            <h2>Looking for Something Special?</h2>
+
+            <p>
+                Have a particular title or type of stationery in mind?
+                Use the contact page to create a sample inquiry.
+            </p>
+
+            <a href="contact.html" class="btn">Ask a Question</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                &copy; 2026 Harbor Light Books &amp; Stationery.
+                Student web design project. Sample collection.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

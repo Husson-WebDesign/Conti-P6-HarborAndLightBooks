@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,9 +15,16 @@
 
     <header>
         <div class="brand">
-            <img src="images/lighthouse.svg" alt="Lighthouse logo" class="brand-logo">
+            <a href="index.html" aria-label="Harbor Light home">
+                <img src="images/lighthouse.svg"
+                     alt="Harbor Light lighthouse logo"
+                     class="brand-logo">
+            </a>
+
             <p class="site-title">Harbor Light Books &amp; Stationery</p>
         </div>
+
+        <p class="tagline">Books, stories, and community in the heart of Bangor.</p>
 
         <button class="menu-toggle" type="button"
                 aria-expanded="false" aria-controls="main-navigation">
@@ -35,98 +41,292 @@
         </nav>
     </header>
 
+
     <main class="container">
 
+        <!-- Services Section -->
         <section id="services" class="section-block">
+
             <h1>Our Services &amp; Collections</h1>
+
+            <p>
+                Harbor Light is a fictional bookstore concept.
+                The services below describe examples of what a
+                neighborhood bookstore could offer.
+            </p>
 
             <div class="service-grid">
 
                 <article class="service-card" id="recommendations">
                     <h2>Book Recommendations</h2>
-                    <p>Our booksellers help customers discover books that match their interests.</p>
+
+                    <p>
+                        Readers can explore books based on their
+                        favorite genres, authors, and interests.
+                        The sample bookstore concept focuses on
+                        helping visitors discover something new.
+                    </p>
+
+                    <a href="contact.html" class="card-link">
+                        Preview a Recommendation Inquiry &rarr;
+                    </a>
                 </article>
+
 
                 <article class="service-card" id="childrens">
                     <h2>Children's Corner &amp; Young Readers</h2>
-                    <p>Picture books, middle-grade adventures, and young adult reads for all ages.</p>
+
+                    <p>
+                        Example collection categories include
+                        picture books, middle-grade adventures,
+                        and young adult stories for readers
+                        at different stages.
+                    </p>
+
+                    <a href="#young-readers" class="card-link">
+                        Explore Young Readers &rarr;
+                    </a>
                 </article>
+
 
                 <article class="service-card" id="events">
                     <h2>Community Events</h2>
-                    <p>We host author readings, story programs, book discussions, and local writer events.</p>
+
+                    <p>
+                        Possible community activities include
+                        author-style readings, children's story
+                        programs, and book discussions.
+                        These are examples, not scheduled events.
+                    </p>
+
+                    <a href="contact.html" class="card-link">
+                        Ask an Event Question &rarr;
+                    </a>
+                </article>
+
+
+                <article class="service-card" id="special-orders">
+                    <h2>Special Order Questions</h2>
+
+                    <p>
+                        Visitors can use the inquiry preview form
+                        to ask about a particular title. The
+                        demonstration does not place orders or
+                        confirm book availability.
+                    </p>
+
+                    <a href="contact.html" class="card-link">
+                        Preview a Special Order Inquiry &rarr;
+                    </a>
                 </article>
 
             </div>
+
         </section>
 
+
+        <!-- Featured Categories -->
         <section class="section-block">
+
             <h2>Featured Categories</h2>
+
+            <p>
+                These sample categories show the variety of
+                books imagined for the Harbor Light collection.
+            </p>
 
             <div class="service-grid">
 
                 <article class="service-card" id="maine-authors">
                     <h2>Maine Authors</h2>
-                    <p>Discover stories and voices from across Maine.</p>
+
+                    <p>
+                        Explore a sample category highlighting
+                        stories and voices inspired by Maine.
+                    </p>
                 </article>
+
 
                 <article class="service-card" id="fiction">
                     <h2>Fiction &amp; Mystery</h2>
-                    <p>Find exciting mysteries and enjoyable fiction.</p>
+
+                    <p>
+                        Discover sample categories featuring
+                        mysteries, adventures, and enjoyable fiction.
+                    </p>
                 </article>
+
 
                 <article class="service-card" id="young-readers">
                     <h2>Young Readers</h2>
-                    <p>Explore books for children and teens.</p>
+
+                    <p>
+                        Explore example categories for children
+                        and teens, including picture books and
+                        middle-grade stories.
+                    </p>
+                </article>
+
+
+                <article class="service-card" id="stationery">
+                    <h2>Stationery &amp; Journals</h2>
+
+                    <p>
+                        The sample stationery collection includes
+                        notebooks, journals, pens, and paper goods
+                        for everyday writing and creativity.
+                    </p>
+                </article>
+
+
+                <article class="service-card" id="literary-gifts">
+                    <h2>Literary Gifts</h2>
+
+                    <p>
+                        Example gift categories include bookmarks,
+                        reading accessories, and keepsakes for
+                        people who enjoy books.
+                    </p>
+                </article>
+
+
+                <article class="service-card" id="nonfiction">
+                    <h2>Nonfiction &amp; Poetry</h2>
+
+                    <p>
+                        Sample categories include nonfiction,
+                        poetry, biographies, and books about
+                        interesting people and places.
+                    </p>
                 </article>
 
             </div>
+
         </section>
 
+
+        <!-- FAQ Section -->
         <section class="faq-section">
+
             <h2>Frequently Asked Questions</h2>
-            <p>Have a question about visiting our bookstore? Start here.</p>
+
+            <p>
+                Have a question about the fictional bookstore
+                concept? Start here.
+            </p>
+
 
             <div class="faq-item">
+
                 <h3>
-                    <button class="faq-question" type="button" aria-expanded="false">
-                        Can I request a book that is not in stock?
+                    <button class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="faq-answer-1">
+                        Can I request a book that is not in the sample collection?
                     </button>
                 </h3>
-                <div class="faq-answer" hidden>
-                    <p>Yes. Contact us with the book's title and author to ask about a special order.</p>
+
+                <div class="faq-answer" id="faq-answer-1" hidden>
+                    <p>
+                        You can use the inquiry preview form to ask
+                        about a particular book. This demonstration
+                        does not place an order or confirm availability.
+                    </p>
                 </div>
+
             </div>
 
+
             <div class="faq-item">
+
                 <h3>
-                    <button class="faq-question" type="button" aria-expanded="false">
-                        What kinds of community events do you host?
+                    <button class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="faq-answer-2">
+                        What kinds of community events are included?
                     </button>
                 </h3>
-                <div class="faq-answer" hidden>
-                    <p>We host author readings, children's story programs, and book discussions.</p>
+
+                <div class="faq-answer" id="faq-answer-2" hidden>
+                    <p>
+                        Example event formats include readings,
+                        children's story programs, and book
+                        discussions. No actual events are scheduled.
+                    </p>
                 </div>
+
             </div>
 
+
             <div class="faq-item">
+
                 <h3>
-                    <button class="faq-question" type="button" aria-expanded="false">
+                    <button class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="faq-answer-3">
                         Can someone help me choose a book?
                     </button>
                 </h3>
-                <div class="faq-answer" hidden>
-                    <p>Absolutely. Our booksellers can help you find books based on your interests.</p>
+
+                <div class="faq-answer" id="faq-answer-3" hidden>
+                    <p>
+                        The bookstore concept includes book
+                        recommendations based on reading interests,
+                        favorite genres, and authors.
+                    </p>
                 </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <h3>
+                    <button class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="faq-answer-4">
+                        Are the books and services listed actual inventory?
+                    </button>
+                </h3>
+
+                <div class="faq-answer" id="faq-answer-4" hidden>
+                    <p>
+                        No. Harbor Light is a fictional student
+                        project. The book categories and service
+                        descriptions are examples created to
+                        demonstrate the website.
+                    </p>
+                </div>
+
             </div>
 
         </section>
 
     </main>
 
+
+    <!-- Footer -->
     <footer>
         <div class="container">
+
+            <p>
+                Harbor Light Books &amp; Stationery is a fictional
+                student project. All business details and offerings
+                are sample content.
+            </p>
+
+            <p>
+                <a href="index.html">Home</a> |
+                <a href="about.html">About</a> |
+                <a href="contact.html">Contact</a>
+            </p>
+
             <p>&copy; 2026 Harbor Light Books &amp; Stationery. All rights reserved.</p>
+
         </div>
     </footer>
 

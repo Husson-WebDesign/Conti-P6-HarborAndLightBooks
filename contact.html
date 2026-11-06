@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,12 +15,16 @@
 
     <header>
         <div class="brand">
-            <img src="images/lighthouse.svg"
-                 alt="Lighthouse logo"
-                 class="brand-logo">
+            <a href="index.html" aria-label="Harbor Light Books & Stationery home">
+                <img src="images/lighthouse.svg"
+                     alt="Harbor Light lighthouse logo"
+                     class="brand-logo">
+            </a>
 
             <p class="site-title">Harbor Light Books &amp; Stationery</p>
         </div>
+
+        <p class="tagline">Books, stories, and community in the heart of Bangor.</p>
 
         <button class="menu-toggle"
                 type="button"
@@ -43,35 +46,48 @@
     <main class="container">
         <section id="contact">
 
-            <h1>Contact Us</h1>
+            <h1>Contact Harbor Light</h1>
 
             <p>
-                Contact Harbor Light Books &amp; Stationery with questions
-                about books, special orders, events, or the bookstore.
+                Have a question about books, recommendations, stationery,
+                or community events? Use the form below to create a sample
+                inquiry preview.
             </p>
 
             <p>
-                <strong>Location:</strong> Bangor, Maine
+                <strong>Project location:</strong> Bangor, Maine
             </p>
 
             <p>
-                <strong>Telephone:</strong> 207-555-0106
+                <strong>Sample telephone:</strong> 207-555-0106
             </p>
 
             <p>
-                <strong>Email:</strong>
+                <strong>Sample email:</strong>
                 <a href="mailto:olivia@harborlightbooks.example">
                     olivia@harborlightbooks.example
                 </a>
             </p>
 
             <p>
-                <strong>Hours:</strong><br>
+                <strong>Sample hours:</strong><br>
                 Monday-Saturday: 9:00 AM-7:00 PM<br>
                 Sunday: 10:00 AM-5:00 PM
             </p>
 
-            <h2>Send Us a Message</h2>
+            <p>
+                <em>
+                    The contact details and hours above are sample information
+                    for this student project.
+                </em>
+            </p>
+
+            <h2>Preview an Inquiry</h2>
+
+            <p>
+                Complete this form to see a preview of your inquiry.
+                This demonstration does not send or store messages.
+            </p>
 
             <form id="contact-form" action="#" method="post" novalidate>
 
@@ -98,11 +114,32 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="phone">Telephone (optional):</label>
-                    <input type="tel"
-                           id="phone"
-                           name="phone"
-                           autocomplete="tel">
+                    <label for="inquiry-type">Type of Inquiry:</label>
+                    <select id="inquiry-type"
+                            name="inquiry-type"
+                            required
+                            aria-describedby="inquiry-type-error">
+                        <option value="">Select an inquiry type</option>
+                        <option value="General question">General question</option>
+                        <option value="Book recommendation">Book recommendation</option>
+                        <option value="Special order question">Special order question</option>
+                        <option value="Event question">Event question</option>
+                    </select>
+                    <p class="error-message" id="inquiry-type-error"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="book-title">Book Title (optional):</label>
+                    <input type="text"
+                           id="book-title"
+                           name="book-title">
+                </div>
+
+                <div class="form-group">
+                    <label for="author">Author (optional):</label>
+                    <input type="text"
+                           id="author"
+                           name="author">
                 </div>
 
                 <div class="form-group">
@@ -115,11 +152,22 @@
                     <p class="error-message" id="message-error"></p>
                 </div>
 
-                <button type="submit" class="button">Send Message</button>
+                <button type="submit" class="button">
+                    Create Inquiry Preview
+                </button>
+
+                <button type="reset" class="button">
+                    Clear Form
+                </button>
 
                 <p id="form-feedback" role="status" aria-live="polite"></p>
 
             </form>
+
+            <section id="inquiry-preview" hidden aria-live="polite">
+                <h2>Inquiry Preview</h2>
+                <div id="preview-content"></div>
+            </section>
 
         </section>
     </main>
@@ -128,8 +176,17 @@
         <div class="container">
             <p>
                 &copy; 2026 Harbor Light Books &amp; Stationery.
-                All rights reserved.
+                Student web design project. Sample business information.
             </p>
+
+            <nav aria-label="Footer navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </footer>
 
