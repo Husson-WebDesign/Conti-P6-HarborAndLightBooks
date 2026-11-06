@@ -66,10 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div>
                     <span style="font-size: 0.8rem; font-weight: 600; color: var(--soft-green); text-transform: uppercase;">${book.category}</span>
                     <h3 style="margin-top: 0.25rem;">${book.title}</h3>
-                    <p style="font-size: 0.9rem; font-style: italic; margin-bottom: 0.75rem;">by ${book.author}</p>
-                    <p>${book.description}</p>
+                    <p style="font-size: 0.9rem; font-style: italic; margin-bottom: 0.75rem; color: #2c3e3d;">by ${book.author}</p>
+                    <p style="color: #2c3e3d;">${book.description}</p>
                 </div>
-                <div style="margin-top: 1rem; font-size: 0.85rem; color: #666; border-top: 1px solid var(--border-color); pt-2;">Sample Demonstration Item</div>
+                <div style="margin-top: 1rem; font-size: 0.85rem; color: #666; border-top: 1px solid var(--border-color); padding-top: 0.5rem;">Sample Demonstration Item</div>
             </div>
         `).join("");
     }
@@ -85,8 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div>
                             <h3 style="color: var(--primary-teal);">${ev.title}</h3>
                             <p style="font-weight: 600; color: var(--soft-green); font-size: 0.9rem; margin-bottom: 0.5rem;">📅 ${ev.date}</p>
-                            <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">📍 ${ev.location}</p>
-                            <p>${ev.description}</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 0.75rem; color: #2c3e3d;">📍 ${ev.location}</p>
+                            <p style="color: #2c3e3d;">${ev.description}</p>
                         </div>
                     </div>
                 `).join("");

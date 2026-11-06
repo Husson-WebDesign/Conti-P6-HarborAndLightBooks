@@ -1,5 +1,5 @@
 /* ==========================================
-   Harbor Light Books & Stationery - Main Stylesheet
+   Harbor Light Books & Stationery - Stylesheet
    ========================================== */
 
 :root {
@@ -7,10 +7,10 @@
     --soft-green: #40534C;
     --accent-warm: #D6BD98;
     --accent-sand: #F7F5F2;
-    --text-dark: #2C3E3D;
+    --text-dark: #1A3636;
     --text-light: #F7F5F2;
     --white: #FFFFFF;
-    --gray-bg: #F4F5F4;
+    --gray-bg: #F7F5F2;
     --border-color: #D1D8D4;
     --transition: all 0.3s ease;
 }
@@ -28,24 +28,7 @@ body {
     line-height: 1.6;
 }
 
-/* Accessibility Skip Link */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: var(--primary-teal);
-    color: var(--white);
-    padding: 8px;
-    z-index: 100;
-    transition: top 0.3s;
-}
-.skip-link:focus {
-    top: 0;
-}
-
-/* ==========================================
-   Header & Navigation (Distinctive & Visible Logo)
-   ========================================== */
+/* Header & Navigation */
 header {
     background-color: var(--primary-teal);
     color: var(--text-light);
@@ -61,26 +44,25 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
 }
 
 .logo-link {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     text-decoration: none;
     color: var(--text-light);
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 24px;
     fill: var(--accent-warm);
-    filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.3));
 }
 
 .logo-text {
-    font-size: 1.35rem;
+    font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 0.5px;
     color: var(--accent-sand);
@@ -108,7 +90,6 @@ nav a:hover, nav a:focus, nav a.active {
     color: var(--white);
 }
 
-/* Mobile Menu Toggle */
 .menu-toggle {
     display: none;
     background: none;
@@ -118,11 +99,9 @@ nav a:hover, nav a:focus, nav a.active {
     cursor: pointer;
 }
 
-/* ==========================================
-   Hero Section (Homepage)
-   ========================================== */
+/* Hero Section */
 .hero {
-    background: linear-gradient(rgba(26, 54, 54, 0.82), rgba(26, 54, 54, 0.82)), url('../images/storefront.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(26, 54, 54, 0.85), rgba(26, 54, 54, 0.85)), url('../images/storefront.jpg') center/cover no-repeat;
     color: var(--text-light);
     padding: 5rem 2rem;
     text-align: center;
@@ -152,9 +131,7 @@ nav a:hover, nav a:focus, nav a.active {
     flex-wrap: wrap;
 }
 
-/* ==========================================
-   Buttons
-   ========================================== */
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -186,9 +163,7 @@ nav a:hover, nav a:focus, nav a.active {
     color: var(--primary-teal);
 }
 
-/* ==========================================
-   Main Content Layouts
-   ========================================== */
+/* Main Layouts & Cards */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -206,7 +181,6 @@ main {
     margin-bottom: 4rem;
 }
 
-/* Grid Systems */
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -220,7 +194,6 @@ main {
     align-items: center;
 }
 
-/* Cards */
 .card {
     background: var(--gray-bg);
     border-radius: 8px;
@@ -231,6 +204,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 1px solid var(--border-color);
 }
 
 .card:hover {
@@ -244,13 +218,11 @@ main {
 }
 
 .card p {
-    color: #4a5568;
+    color: #2c3e3d;
     margin-bottom: 1.5rem;
 }
 
-/* ==========================================
-   Discovery & Filters (Books / Events)
-   ========================================== */
+/* Filters & Notices */
 .filter-controls {
     display: flex;
     gap: 1rem;
@@ -265,6 +237,8 @@ main {
     border-radius: 4px;
     font-size: 1rem;
     min-width: 220px;
+    background-color: var(--white);
+    color: var(--text-dark);
 }
 
 .sample-notice {
@@ -278,9 +252,7 @@ main {
     border: 1px solid #faebcc;
 }
 
-/* ==========================================
-   Forms & Inquiry Preview
-   ========================================== */
+/* Forms & Preview Box */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -292,15 +264,14 @@ label {
     color: var(--primary-teal);
 }
 
-input[type="text"],
-input[type="email"],
-select,
-textarea {
+input[type="text"], input[type="email"], select, textarea {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 1rem;
+    background-color: var(--white);
+    color: var(--text-dark);
 }
 
 input:focus, select:focus, textarea:focus {
@@ -310,7 +281,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .preview-box {
-    background-color: var(--accent-sand);
+    background-color: var(--white);
     border: 1px dashed var(--soft-green);
     padding: 1.5rem;
     border-radius: 6px;
@@ -322,9 +293,7 @@ input:focus, select:focus, textarea:focus {
     display: block;
 }
 
-/* ==========================================
-   FAQ Accordion
-   ========================================== */
+/* FAQ Accordion */
 .faq-item {
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 1rem;
@@ -347,7 +316,7 @@ input:focus, select:focus, textarea:focus {
 
 .faq-answer {
     padding-bottom: 1rem;
-    color: #4a5568;
+    color: #2c3e3d;
     display: none;
 }
 
@@ -355,9 +324,7 @@ input:focus, select:focus, textarea:focus {
     display: block;
 }
 
-/* ==========================================
-   Footer
-   ========================================== */
+/* Footer (High Contrast Links) */
 footer {
     background-color: var(--primary-teal);
     color: var(--text-light);
@@ -387,8 +354,9 @@ footer {
 }
 
 .footer-col a {
-    color: var(--text-light);
-    text-decoration: none;
+    color: var(--accent-sand);
+    text-decoration: underline;
+    font-weight: 500;
     transition: var(--transition);
 }
 
@@ -399,14 +367,12 @@ footer {
 .footer-bottom {
     text-align: center;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255,255,255,0.2);
     font-size: 0.85rem;
-    color: #cbd5e1;
+    color: var(--accent-sand);
 }
 
-/* ==========================================
-   Responsive Design
-   ========================================== */
+/* Responsive */
 @media (max-width: 768px) {
     nav ul {
         display: none;
