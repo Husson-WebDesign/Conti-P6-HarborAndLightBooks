@@ -1,0 +1,44 @@
+[
+  {
+    "title": "The Coastal Tide",
+    "author": "Evelyn Vance",
+    "category": "Fiction",
+    "description": "A touching novel about family secrets and quiet coastal life in Maine.",
+    "image": "images/storefront.jpg"
+  },
+  {
+    "title": "Pine Tree Whispers",
+    "author": "Arthur Pendelton",
+    "category": "Maine Authors",
+    "description": "An evocative exploration of local folklore and deep woods history.",
+    "image": "images/bookstore-interior.jpg"
+  },
+  {
+    "title": "Midnight at the Lighthouse",
+    "author": "Clara Sterling",
+    "category": "Mystery",
+    "description": "A gripping whodunit set against a stormy New England backdrop.",
+    "image": "images/storefront.jpg"
+  },
+  {
+    "title": "The Little Sailor's Journey",
+    "author": "Samuel Green",
+    "category": "Children",
+    "description": "A beautifully illustrated bedtime story for adventurous young readers.",
+    "image": "images/bookstore-interior.jpg"
+  },
+  {
+    "title": "Leatherbound Journal",
+    "author": "Harbor Light Goods",
+    "category": "Stationery",
+    "description": "Hand-stitched grid pages crafted for daily journaling and sketching.",
+    "image": "images/storefront.jpg"
+  },
+  {
+    "title": "Foundations of Wood & Stone",
+    "author": "Marcus Thorne",
+    "category": "Nonfiction",
+    "description": "A thoughtful historical study of New England architectural heritage.",
+    "image": "images/storefront.jpg"
+  }
+]

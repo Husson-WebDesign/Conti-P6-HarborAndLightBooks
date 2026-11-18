@@ -1,78 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About Us | Harbor Light Books &amp; Stationery</title>
-
+    <title>About Us | Harbor Light Books</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
 </head>
-
 <body>
-
     <header>
-        <div class="brand">
-            <img src="images/lighthouse.svg"
-                 alt="Lighthouse logo"
-                 class="brand-logo">
-
-            <p class="site-title">Harbor Light Books &amp; Stationery</p>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <svg class="logo-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                <span class="logo-text">Harbor Light Books</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Books & Stationery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Visit Us</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <button class="menu-toggle"
-                type="button"
-                aria-expanded="false"
-                aria-controls="main-navigation">
-            Menu
-        </button>
-
-        <nav id="main-navigation" aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" aria-current="page">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main class="container">
-        <section id="about" class="section-block">
+    <main>
+        <h1 class="section-title">About Harbor Light Books</h1>
+        
+        <div class="grid-2" style="margin-bottom: 3rem;">
+            <div>
+                <img src="images/bookstore-interior.jpg" alt="Cozy bookstore interior with warm lighting" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; text-align: center;"><em>Note: Photograph used for atmospheric demonstration purposes.</em></p>
+            </div>
+            <div>
+                <h2 style="color: var(--primary-teal); margin-bottom: 1rem;">Our Purpose & Community Connection</h2>
+                <p style="margin-bottom: 1rem; color: #2c3e3d;">Founded with a passion for literature and community connection, Harbor Light Books & Stationery serves as a warm, inviting independent bookstore in Bangor, Maine.</p>
+                <p style="margin-bottom: 1rem; color: #2c3e3d;">We believe a bookstore should be more than shelves of merchandise—it should be a neighborhood gathering space where readers discover new perspectives, local writers share their stories, and stationery enthusiasts find inspiration.</p>
+            </div>
+        </div>
 
-            <h1>About Us</h1>
-
-            <img src="images/bookstore-interior.jpg"
-                 alt="Cozy bookstore interior with shelves of books">
-
-            <p>
-                Nestled right in the heart of Bangor, Harbor Light Books & Stationery was created
-                 to be a warm, welcoming gathering place for everyone who loves a good story. 
-                Our purpose goes beyond simply selling books, we strive to cultivate a cozy, inspiring space
-                 where curiosity is sparked, conversations begin, and neighbors can slow down and discover 
-                 something wonderful.
-            </p>
-
-            <p>
-                As an independent, neighborhood-focused shop, we take pride in serving a vibrant community of readers, 
-                families, students, local writers, and thoughtful gift buyers. Our shelves feature a
-                 thoughtfully curated collection of books spanning diverse genres, alongside a carefully chosen
-                  selection of fine stationery, unique gifts, and creative supplies. More than just a retail 
-                  space, we are deeply committed to connecting with our community through engaging events,
-                   author visits, and programming that brings people together.
-            </p>
-
-        </section>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Curated Selection</h3>
+                <p>Every book and stationery item on our shelves is thoughtfully chosen to spark curiosity, reflection, and joy.</p>
+            </div>
+            <div class="card">
+                <h3>Welcoming Readers</h3>
+                <p>From lifelong bibliophiles to young readers just beginning their journey, everyone finds a welcoming seat here.</p>
+            </div>
+            <div class="card">
+                <h3>Community Focus</h3>
+                <p>Proudly rooted in Bangor, we partner with regional authors and host regular community book discussions.</p>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Harbor Light Books &amp; Stationery. All rights reserved.</p>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Harbor Light Books</h4>
+                <p>Your independent neighborhood bookstore in Bangor, Maine.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="books.html">Books & Stationery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Visit & Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Location</h4>
+                <p>124 Hammond Street, Bangor, ME</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Harbor Light Books & Stationery. Class project demonstration site.</p>
         </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

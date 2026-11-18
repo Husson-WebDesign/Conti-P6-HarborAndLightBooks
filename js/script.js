@@ -1,150 +1,135 @@
-
-/*
-   Harbor Light Books & Stationery
-   Phase 3 - Interactive Features
-*/
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    // MOBILE MENU
-    const menuButton = document.querySelector(".menu-toggle");
-    const navigation = document.querySelector("#main-navigation");
-
-    if (menuButton && navigation) {
-        menuButton.addEventListener("click", function () {
-            const isOpen = navigation.classList.toggle("open");
-
-            menuButton.setAttribute("aria-expanded", String(isOpen));
-            menuButton.textContent = isOpen ? "Close Menu" : "Menu";
+document.addEventListener("DOMContentLoaded", () => {
+    // Mobile Navigation Toggle
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navUl = document.querySelector("nav ul");
+    if (menuToggle && navUl) {
+        menuToggle.addEventListener("click", () => {
+            navUl.classList.toggle("show");
         });
     }
 
-    // FAQ ACCORDION
-    const faqButtons = document.querySelectorAll(".faq-question");
-
-    faqButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            const faqItem = button.closest(".faq-item");
-
-            if (!faqItem) {
-                return;
+    // FAQ Accordion Functionality
+    const faqItems = document.querySelectorAll(".faq-item");
+    faqItems.forEach(item => {
+        const btn = item.querySelector(".faq-question");
+        btn.addEventListener("click", () => {
+            const isOpen = item.classList.contains("open");
+            faqItems.forEach(i => i.classList.remove("open"));
+            if (!isOpen) {
+                item.classList.add("open");
             }
-
-            const answer = faqItem.querySelector(".faq-answer");
-
-            if (!answer) {
-                return;
-            }
-
-            const isOpen = button.getAttribute("aria-expanded") === "true";
-
-            button.setAttribute("aria-expanded", String(!isOpen));
-            answer.hidden = isOpen;
         });
     });
 
-    // CONTACT FORM VALIDATION
-    const contactForm = document.querySelector("#contact-form");
+    // Books JSON Loading & Filtering
+    const booksContainer = document.getElementById("booksContainer");
+    if (booksContainer) {
+        fetch("data/books.json")
+            .then(res => res.json())
+            .then(books => {
+                displayBooks(books);
 
-    if (contactForm) {
-        const nameInput = document.querySelector("#name");
-        const emailInput = document.querySelector("#email");
-        const messageInput = document.querySelector("#message");
+                const searchInput = document.getElementById("searchInput");
+                const categoryFilter = document.getElementById("categoryFilter");
+                const noResultsMsg = document.getElementById("noResultsMsg");
 
-        const nameError = document.querySelector("#name-error");
-        const emailError = document.querySelector("#email-error");
-        const messageError = document.querySelector("#message-error");
-        const feedback = document.querySelector("#form-feedback");
+                function filterBooks() {
+                    const query = searchInput.value.toLowerCase();
+                    const category = categoryFilter.value;
 
-        function checkField(input, errorElement, message) {
-            if (!input || !errorElement) {
-                return false;
-            }
+                    const filtered = books.filter(book => {
+                        const matchesQuery = book.title.toLowerCase().includes(query) || book.author.toLowerCase().includes(query);
+                        const matchesCategory = category === "" || book.category === category;
+                        return matchesQuery && matchesCategory;
+                    });
 
-            errorElement.textContent = message;
-
-            if (message) {
-                input.classList.add("invalid");
-                input.setAttribute("aria-invalid", "true");
-                return false;
-            }
-
-            input.classList.remove("invalid");
-            input.removeAttribute("aria-invalid");
-            return true;
-        }
-
-        function validateName() {
-            return checkField(
-                nameInput,
-                nameError,
-                nameInput.value.trim() === ""
-                    ? "Please enter your name."
-                    : ""
-            );
-        }
-
-        function validateEmail() {
-            let error = "";
-
-            if (emailInput.value.trim() === "") {
-                error = "Please enter your email address.";
-            } else if (!emailInput.validity.valid) {
-                error = "Please enter a valid email address.";
-            }
-
-            return checkField(emailInput, emailError, error);
-        }
-
-        function validateMessage() {
-            return checkField(
-                messageInput,
-                messageError,
-                messageInput.value.trim() === ""
-                    ? "Please enter a message."
-                    : ""
-            );
-        }
-
-        nameInput.addEventListener("input", validateName);
-        emailInput.addEventListener("input", validateEmail);
-        messageInput.addEventListener("input", validateMessage);
-
-        contactForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            feedback.textContent = "";
-            feedback.className = "";
-
-            const nameValid = validateName();
-            const emailValid = validateEmail();
-            const messageValid = validateMessage();
-
-            if (!nameValid || !emailValid || !messageValid) {
-                feedback.textContent =
-                    "Please correct the errors above before continuing.";
-                feedback.className = "error";
-
-                const firstInvalid = contactForm.querySelector(".invalid");
-
-                if (firstInvalid) {
-                    firstInvalid.focus();
+                    displayBooks(filtered);
+                    if (noResultsMsg) {
+                        noResultsMsg.style.display = filtered.length === 0 ? "block" : "none";
+                    }
                 }
 
-                return;
+                searchInput.addEventListener("input", filterBooks);
+                categoryFilter.addEventListener("change", filterBooks);
+            })
+            .catch(err => {
+                console.error("Error loading books:", err);
+                booksContainer.innerHTML = "<p style='text-align:center; color:red;'>Unable to load book catalog at this time.</p>";
+            });
+    }
+
+    function displayBooks(books) {
+        const booksContainer = document.getElementById("booksContainer");
+        if (!booksContainer) return;
+        booksContainer.innerHTML = books.map(book => `
+            <div class="card">
+                <div>
+                    <span style="font-size: 0.8rem; font-weight: 600; color: var(--soft-green); text-transform: uppercase;">${book.category}</span>
+                    <h3 style="margin-top: 0.25rem;">${book.title}</h3>
+                    <p style="font-size: 0.9rem; font-style: italic; margin-bottom: 0.75rem; color: #2c3e3d;">by ${book.author}</p>
+                    <p style="color: #2c3e3d;">${book.description}</p>
+                </div>
+                <div style="margin-top: 1rem; font-size: 0.85rem; color: #666; border-top: 1px solid var(--border-color); padding-top: 0.5rem;">Sample Demonstration Item</div>
+            </div>
+        `).join("");
+    }
+
+    // Events JSON Loading
+    const eventsContainer = document.getElementById("eventsContainer");
+    if (eventsContainer) {
+        fetch("data/events.json")
+            .then(res => res.json())
+            .then(events => {
+                eventsContainer.innerHTML = events.map(ev => `
+                    <div class="card">
+                        <div>
+                            <h3 style="color: var(--primary-teal);">${ev.title}</h3>
+                            <p style="font-weight: 600; color: var(--soft-green); font-size: 0.9rem; margin-bottom: 0.5rem;">📅 ${ev.date}</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 0.75rem; color: #2c3e3d;">📍 ${ev.location}</p>
+                            <p style="color: #2c3e3d;">${ev.description}</p>
+                        </div>
+                    </div>
+                `).join("");
+            })
+            .catch(err => {
+                console.error("Error loading events:", err);
+                eventsContainer.innerHTML = "<p style='text-align:center; color:red;'>Unable to load events schedule at this time.</p>";
+            });
+    }
+
+    // Inquiry Form Preview Handling
+    const inquiryForm = document.getElementById("inquiryForm");
+    const inquiryType = document.getElementById("inquiryType");
+    const bookDetailsGroup = document.getElementById("bookDetailsGroup");
+
+    if (inquiryType && bookDetailsGroup) {
+        inquiryType.addEventListener("change", () => {
+            if (inquiryType.value === "Special Order" || inquiryType.value === "Book Recommendation") {
+                bookDetailsGroup.style.display = "block";
+            } else {
+                bookDetailsGroup.style.display = "none";
             }
-
-            feedback.textContent =
-                "Thank you! Your form passed validation. This demonstration does not send your message.";
-            feedback.className = "success";
-
-            contactForm.reset();
-
-            checkField(nameInput, nameError, "");
-            checkField(emailInput, emailError, "");
-            checkField(messageInput, messageError, "");
         });
     }
 
-});
+    if (inquiryForm) {
+        inquiryForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            document.getElementById("prevType").textContent = inquiryType.value;
+            document.getElementById("prevName").textContent = document.getElementById("visitorName").value;
+            document.getElementById("prevEmail").textContent = document.getElementById("visitorEmail").value;
+            
+            const bookVal = document.getElementById("bookTitleAuthor").value;
+            const prevBookRow = document.getElementById("prevBookRow");
+            if (inquiryType.value === "Special Order" || inquiryType.value === "Book Recommendation") {
+                prevBookRow.style.display = "block";
+                document.getElementById("prevBook").textContent = bookVal || "Not specified";
+            } else {
+                prevBookRow.style.display = "none";
+            }
 
+            document.getElementById("prevMsg").textContent = document.getElementById("visitorMessage").value;
+            document.getElementById("previewBox").classList.add("active");
+        });
+    }
+});
