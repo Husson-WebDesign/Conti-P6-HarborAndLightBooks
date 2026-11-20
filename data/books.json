@@ -25,20 +25,20 @@
     "author": "Samuel Green",
     "category": "Children",
     "description": "A beautifully illustrated bedtime story for adventurous young readers.",
-    "image": "images/04_The_Little_Sailor's_Journey.png"
+    "image": "images/04_The_Little_Sailors_Journey.png"
   },
   {
     "title": "Leatherbound Journal",
     "author": "Harbor Light Goods",
     "category": "Stationery",
     "description": "Hand-stitched grid pages crafted for daily journaling and sketching.",
-    "image": "images/Vintage Leatherbound Compass Journal.png"
+    "image": "images/Journal.png"
   },
   {
     "title": "Foundations of Wood & Stone",
     "author": "Marcus Thorne",
     "category": "Nonfiction",
     "description": "A thoughtful historical study of New England architectural heritage.",
-    "image": "images/06_Foundations_of_Wood_&_Stone.png"
+    "image": "images/06_Foundations_of_Wood_and_Stone.png"
   }
 ]
