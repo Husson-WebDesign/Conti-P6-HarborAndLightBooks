@@ -4,28 +4,28 @@
     "author": "Evelyn Vance",
     "category": "Fiction",
     "description": "A touching novel about family secrets and quiet coastal life in Maine.",
-    "image": "images/01_The_Coastal_Tide.jpg"
+    "image": "images/01_The_Coastal_Tide.png"
   },
   {
     "title": "Pine Tree Whispers",
     "author": "Arthur Pendelton",
     "category": "Maine Authors",
     "description": "An evocative exploration of local folklore and deep woods history.",
-    "image": "images/02_Pine_Tree_Whispers.jpg"
+    "image": "images/02_Pine_Tree_Whispers.png"
   },
   {
     "title": "Midnight at the Lighthouse",
     "author": "Clara Sterling",
     "category": "Mystery",
     "description": "A gripping whodunit set against a stormy New England backdrop.",
-    "image": "images/03_Midnight_at_the_Lighthouse.jpg"
+    "image": "images/03_Midnight_at_the_Lighthouse.png"
   },
   {
     "title": "The Little Sailor's Journey",
     "author": "Samuel Green",
     "category": "Children",
     "description": "A beautifully illustrated bedtime story for adventurous young readers.",
-    "image": "images/04_The_Little_Sailor's_Journey.jpg"
+    "image": "images/04_The_Little_Sailor's_Journey.png"
   },
   {
     "title": "Leatherbound Journal",
@@ -39,6 +39,6 @@
     "author": "Marcus Thorne",
     "category": "Nonfiction",
     "description": "A thoughtful historical study of New England architectural heritage.",
-    "image": "images/06_Foundations_of_Wood_&_Stone.jpg"
+    "image": "images/06_Foundations_of_Wood_&_Stone.png"
   }
 ]
